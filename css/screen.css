@@ -134,6 +134,7 @@ ul.posts {
   margin: 1em auto 2em auto;
   line-height: 1.5em;
   float: left;
+  padding-bottom:6em;
 }
 
 .title {
@@ -170,12 +171,14 @@ ul.posts {
     color: #ccc;
     border-top: 2px solid #eee;
     margin-top: 2em;
-    margin-bottom: 3em;
+    /*margin-bottom: 3em;*/
+    width:50em;
     padding-top: 1em;
     line-height: 1.3em;
     overflow: hidden;
     position:fixed;
     bottom:0px;
+    padding-bottom:1em;
     background-color:#fff;
   }
 
