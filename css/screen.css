@@ -167,19 +167,26 @@ ul.posts {
 
   .site .footer {
     font-size: 80%;
-    color: #666;
+    color: #ccc;
     border-top: 2px solid #eee;
     margin-top: 2em;
     margin-bottom: 3em;
     padding-top: 1em;
     line-height: 1.3em;
     overflow: hidden;
+    position:fixed;
+    bottom:0px;
+    background-color:#fff;
   }
 
     .site .footer .contact {
       float: left;
       margin-right: 3em;
     }
+
+      .site .footer a {
+        color: #aaa;
+      }
 
       .site .footer .contact a {
         color: #8085C1;
