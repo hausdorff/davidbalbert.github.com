@@ -1,4 +1,4 @@
-Blog
+Alex's blog
 ====
 
-This will be a place for my blog.
+My first GitHub website and Jekyll blog. Fun and profit.
