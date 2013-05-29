@@ -24,7 +24,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
+  font-size: 300%;
+  line-height: 0.90em;
 }
 
 h1 {
@@ -80,7 +81,12 @@ ul.posts {
 /*****************************************************************************/
 
 #site-title {
-  font-size: 1.4em;
+  font-size: 2.4em;
+}
+
+#blog-title {
+  font-size: 1.2em;
+  font-weight:normal;
 }
 
 .about {
