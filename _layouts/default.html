@@ -30,6 +30,22 @@
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
 
+<script>
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  });
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
   <noscript>
     <h2 style="border-style: solid; padding:5px; color:red;">Hey there! I see you're not using JavaScript. Just FYI, I use <a href="http://www.mathjax.org/" style="color:blue;">MathJax</a> to display things that deserve to look like math.</h2>
   </noscript>
