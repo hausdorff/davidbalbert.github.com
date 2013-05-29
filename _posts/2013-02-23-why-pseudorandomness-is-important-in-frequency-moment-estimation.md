@@ -17,4 +17,6 @@ One of the more interesting results in the area from the last few [years][1], us
 I won't share the (somewhat complicated) derivation here, but there are many interesting questions that remain open in the area. The most important one in my opinion? So far, it seems that most algorithms for pseudorandom bitstreams lead to provably suboptimal space consumption in sketches. Is it possible to develop algorithms for generating such bitstreams that pathologically and on a very general basis lead to optimal space consumption? I suspect not, but either result would be very important for the future of the area of research surrounding streaming algorithms.
 
 
-[1]: Daniel M. Kane, Jelani Nelson, and David P. Woodruff. An optimal algorithm for the distinct elements problem. In Proceedings of the 29th ACM SIGACT-SIGMOD-SIGART Symposium on Principles of Database Systems (PODS), pages 41–52, 2010.
+### Footnotes
+
+[1]: Daniel M. Kane, Jelani Nelson, and David P. Woodruff. *An optimal algorithm for the distinct elements problem*. In Proceedings of the 29th ACM SIGACT-SIGMOD-SIGART Symposium on Principles of Database Systems (PODS), pages 41–52, 2010.
