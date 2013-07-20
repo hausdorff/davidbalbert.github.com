@@ -4,3 +4,7 @@ redcarpet:
   extensions: [smart]
 pygments: true
 permalink: /:title.html
+
+name: computer "scientist"
+description: My name is Alex Clemmer, and this is a blog about the stuff that has not quite gotten me fired yet.
+url: http://blog.nullspace.io
