@@ -137,7 +137,7 @@ For the future, I would propose the following.
 <p></p><br/>
 <p></p><br/>
 
-*If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/). The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met, and whithout whose thoughtful feedback, this work would not have been done.*
+*If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/). The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met, and without whose thoughtful feedback, this work would not have been done.*
 
 
 <p></p><br/>
