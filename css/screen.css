@@ -136,7 +136,7 @@ ul.posts {
 .site {
   font-size: 110%;
   text-align: left;
-  width: 40em;
+  width: 50em;
   margin: 1em auto 2em auto;
   line-height: 1.5em;
   float: left;
@@ -178,7 +178,7 @@ ul.posts {
     border-top: 2px solid #eee;
     margin-top: 2em;
     /*margin-bottom: 3em;*/
-    width:50em;
+    width:70em;
     padding-top: 1em;
     line-height: 1.3em;
     overflow: hidden;
