@@ -172,7 +172,7 @@ If we consider each expression or statement a node in a tree, then each thing in
 
  As a result, you can destructure the Python source into trees and subtrees.
 
-Let's look at the AST for the very short Python program `def cowfun(): return 'cow'` that we saw earlier. (We'll use the parser from my [my lexing/parsing suite](https://github.com/hausdorff/pyli).)
+Let's look at the AST for the very short Python program `def cowfun(): return 'cow'` that we saw earlier. (We'll use the parser from my [my lexing/parsing suite](https://github.com/hausdorff/pyli), whose source I've been showing you this whole time.)
 
 ```scheme
 > echo "def cowfun(): return 'cow'" | make pyli
