@@ -45,7 +45,7 @@ The `==>` operator represents a "rule"---simply put, `pattern ==> func` will cal
 
 The `where` keyword just gives us concise English-like syntax for defining and using variables, *e.g.*, "a file is a bunch of lines concatenated with an EOF marker, `where` lines is defined as $WHATEVER and the EOF marker is defined as $SOMETHING_ELSE."
 
-The point of `ter "ENDMARKER"` is to match to the `ENDMARKER` token, which is a special token indicating that the file has ended. We'll talk more about these "token" things in the [making parsing easy](#making-parsing-easy) section, but for now just think of it as a signal that the file has ended. If you know about [context-free grammars](http://en.wikipedia.org/wiki/Context-free_grammar), `ter` is actually a terminal in the grammar.
+The point of `ter "ENDMARKER"` is to match to the `ENDMARKER` token, which is a special token indicating that the file has ended. We'll talk more about these "token" things in the [making parsing easy](#making-parsing-easy) section, but for now just think of it as a signal that the file has ended. If you know about [context-free grammars](http://en.wikipedia.org/wiki/Context-free_grammar), `ter` is actually a terminal in the grammar, as opposed to a rule (recall that a rules is defined by the `==>` operator).
 
 
 ## Parsing a function
