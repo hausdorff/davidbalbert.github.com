@@ -204,7 +204,7 @@ This is possible, but much more annoying to write.
 
 Here's an example using our simple program from before, `def cowfun(): return 'cow'`. We'll plug it into the lexer (from [my lexing/parsing suite](https://github.com/hausdorff/pyli)) via standard in. In response, we receive a set of tokens as output.
 
-```
+```scheme
 > echo "def cowfun(): return 'cow'" | make pyle
 (KEYWORD def)
 (ID "cowfun")
