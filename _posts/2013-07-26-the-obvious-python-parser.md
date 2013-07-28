@@ -5,15 +5,13 @@ permalink: obvious-python-parser.html
 ---
 
 
-**All parser code is available [here](https://github.com/hausdorff/pyli/blob/master/src/Parser.hs).**
-
 I spent my first few weeks at [Hacker School](https://www.hackerschool.com/) writing a Python compiler from basically scratch.
 
 The task of merely parsing a complete language like Python can be quite intimidating at the outset. I've found that many people simply assume it's nearly impossible.
 
 I began to wonder if it was possible to write a parser so clear that it would seem obvious how the parser worked.
 
-Let's look at where I took this.
+Let's look at where I took this. (**Full source available [here](https://github.com/hausdorff/pyli/blob/master/src/Parser.hs)**.)
 
 This article will go through 3 basic phases:
 
