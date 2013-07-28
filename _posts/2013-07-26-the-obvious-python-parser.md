@@ -45,6 +45,8 @@ The `==>` operator represents a "rule"---simply put, `pattern ==> func` will cal
 
 The `where` keyword just gives us concise English-like syntax for defining and using variables, *e.g.*, "a file is a bunch of lines concatenated with an EOF marker, `where` lines is defined as $WHATEVER and the EOF marker is defined as $SOMETHING_ELSE."
 
+The point of `ter "ENDMARKER"` is to match to the `ENDMARKER` token, which is a special token indicating that the file has ended. We'll talk more about these "token" things in the [making parsing easy](#making-parsing-easy) section, but for now just think of it as a signal that the file has ended. If you know about [context-free grammars](http://en.wikipedia.org/wiki/Context-free_grammar), `ter` is actually a terminal in the grammar.
+
 
 ## Parsing a function
 
@@ -69,7 +71,12 @@ In English I would read this as:
 
 > A function is the keyword `def` concatenated with the function's `id` (or the name of the function, which in this case is `cowfun`), a list of `parameters`, a `colon`, and a `body`. When we parse a function, we will call `emitFuncdef`.
 
-There's nothing really new in this example. `<~>` still means concatenation, and the components like `def` and `colon` are defined in the `where` block.
+There's nothing really conceptually new in this example. `<~>` still means concatenation, and the components like `def` and `colon` are defined in the `where` block.
+
+The `ter` function is used here in ways that might be sort of new, however. `ter "def"` basically matches the keyword `def`. `ter ":"` matches a colon in the source. `ter "ID"` matches an identifier---in this case, the token stores both the fact that it's an `ID` token, and the identifier itself, which is `cowfun` in the example above.
+
+`suite` is another rule contained elsewhere in the function.
+
 
 ## Parsing Python's `raise from`
 
@@ -116,6 +123,11 @@ aCow = (isGreen ==> milkGreenCow)
 This means that the `<|>` operator should have lower precedence than both the `<~>` and the `==>` operators. In other words, the very last thing to get evaluated should be the `<|>`.
 
 And indeed this is how the parsing library we're using works.
+
+Aside from that, the new expression `eps ""` matches "no token", or more liberally, "nothing". If you know about CFGs, this is the equivalent of epsilon. It is basically saying "there's no `from`" clause.
+
+The expression `ter "from"` just matches the keyword `from`.
+
 
 ## Running the parse
 
@@ -180,7 +192,7 @@ From here you can do all sorts of things. You can optimize the code by transform
 And so on.
 
 
-## Footnote: making parsing easy
+## <a id="making-parsing-easy"></a> Footnote: making parsing easy
 
 It turns out that the code I wrote is relatively simple because of a phase called *lexing*.
 
