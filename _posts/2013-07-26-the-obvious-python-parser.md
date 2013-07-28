@@ -15,7 +15,7 @@ Let's look at where I took this. (**Full source available [here](https://github.
 
 This article will go through 3 basic phases:
 
-* Showing the code that does the parsing. These will basically be declarations of syntactic rules that cannot be broken by any legal Python program. They describe what a Python program *is*, and the rules in the parser collectively describe all possible Python programs.
+* Showing examples of code that does the parsing. These will basically be declarations of syntactic rules that cannot be broken by any legal Python program. They describe what a Python program *is*, and the rules in the parser collectively describe all possible Python programs.
 * Showing the code that takes these rules and actually applies them to parse Python programs.
 * Brief discussion of what the parsing itself is actually doing, what the output is, and why we want to do it.
 
@@ -23,7 +23,7 @@ This article will go through 3 basic phases:
 <p></p>
 
 
-## Parsing a file
+## Example: parsing a file
 
 The following is a function called `fileInput` that merely parses a file. (See original source [here](https://github.com/hausdorff/pyli/blob/master/src/Parser.hs#L28).)
 
@@ -48,7 +48,7 @@ The `where` keyword just gives us concise English-like syntax for defining and u
 The point of `ter "ENDMARKER"` is to match to the `ENDMARKER` token, which is a special token indicating that the file has ended. We'll talk more about these "token" things in the [making parsing easy](#making-parsing-easy) section, but for now just think of it as a signal that the file has ended. If you know about [context-free grammars](http://en.wikipedia.org/wiki/Context-free_grammar), `ter` is actually a terminal in the grammar, as opposed to a rule (recall that a rules is defined by the `==>` operator).
 
 
-## Parsing a function
+## Example: parsing a function
 
 If you don't know Python, here's an example of a Python function. It's called `cowfun`, it takes no arguments and returns the string `"cow"`.
 
@@ -78,7 +78,7 @@ The `ter` function is used here in ways that might be sort of new, however. `ter
 `suite` is another rule contained elsewhere in the source.
 
 
-## Parsing Python's `raise from`
+## Example: parsing Python's `raise from`
 
 In Python, exceptions are thrown using the `raise` keyword, *e.g.*, `raise CowError`.
 
