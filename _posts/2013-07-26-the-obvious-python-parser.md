@@ -153,7 +153,7 @@ main = do code <- (hGetContents stdin)
 
 This is the `main` routine of the parser. It takes data in from standard in, and assumes that the code it gets represents a complete Python file. It calls the lexer using `Lexer.lex` (more on the lexer in a minute) and then parses the tokenized output using `Parser.parseFile`.
 
-The critical part is the `case` statement. If the parser outputs `[]` (the empty list), then the parse has failed, and we output `#f`. Otherwise we output the parsed file. (More on that in a minute too.)
+The critical part is the `case` statement. If the parser outputs `[]` (the empty list), then the parse has failed, and we output `#f`. Otherwise we output the parsed file. (More on that in a minute too.) Note that this isn't a bug---even an empty program should have output, and I encourage you to try it to see why using the shell command in the next section.
 
 
 ## What is this parser actually doing?
