@@ -75,7 +75,7 @@ There's nothing really conceptually new in this example. `<~>` still means conca
 
 The `ter` function is used here in ways that might be sort of new, however. `ter "def"` basically matches the keyword `def`. `ter ":"` matches a colon in the source. `ter "ID"` matches an identifier---in this case, the token stores both the fact that it's an `ID` token, and the identifier itself, which is `cowfun` in the example above.
 
-`suite` is another rule contained elsewhere in the function.
+`suite` is another rule contained elsewhere in the source.
 
 
 ## Parsing Python's `raise from`
