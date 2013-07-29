@@ -172,7 +172,9 @@ If we consider each expression or statement a node in a tree, then each thing in
 
  As a result, you can destructure the Python source into trees and subtrees.
 
-Let's look at the AST for the very short Python program `def cowfun(): return 'cow'` that we saw earlier. (We'll use the parser from my [my lexing/parsing suite](https://github.com/hausdorff/pyli), whose source I've been showing you this whole time.)
+Let's look at the AST for the very short Python program `def cowfun(): return 'cow'` that we saw earlier.
+
+The command at the top of the code snipped below runs this small program through the parser in [my lexing/parsing suite](https://github.com/hausdorff/pyli), whose source I've been showing you this whole time.
 
 ```scheme
 > echo "def cowfun(): return 'cow'" | make pyli
@@ -183,9 +185,11 @@ Let's look at the AST for the very short Python program `def cowfun(): return 'c
      "cow"))))
 ```
 
-The tree here is represented as a LISPy list of lists. Here we see that `def` is a child of `program`. Similarly, the name `cowfun` and the `return` statement are children of `def`.
+The tree here is represented as a LISPy list of lists. Here we see that `def` is a child of `program`. Similarly, the name `cowfun` and the `return` statement are children of `def`. **The LISPy AST is the ultimate output of the parsing functions I showed you earlier.** You specify the rules of Python, then you run the parse using functions from the parsing library, and what you get out is an AST.
 
-**This is the ultimate output of the parsing functions I showed you earlier.** You specify the rules of Python, then you run the parse using functions from the parsing library, and what you get out is an AST.
+If you don't do well with fancy LISPy trees, we can vizualize it using the `dot` command from the [Graphviz](http://www.graphviz.org/) suite.
+
+<center><img src="/images/simple-python-ast.png" alt="brains" height="300px"/></center>
 
 From here you can do all sorts of things. You can optimize the code by transforming the tree. You can make a Python-to-X (where X is C++ or something) compiler by transforming the code into an AST for a different language and doing an inorder traversal that emits the code in a target language language.
 
