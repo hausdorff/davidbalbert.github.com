@@ -170,7 +170,7 @@ For example, consider the expression `1 + 1 * 2`. According to order of operatio
 
 <center><img src="/images/arith-ast.png" alt="brains" height="200px"/></center>
 
-In order to evaluate the addition, we must traverse and return from the multiplication subtree.
+Since the multiplication is a child of the addition, to perform addition, we must first obtain the result from the multiplication. Hence, evaluation is a function of the tree traversal.
 
 In Python, all valid programs can be represented as trees of syntax much like this one, except the nodes can be any statement or expression, not just numbers and operators. For example, a `while` statement will have a predicate and a body, which can itself contain more `while` statements.
 
