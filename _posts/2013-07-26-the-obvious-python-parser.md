@@ -162,19 +162,19 @@ At this point, we have a bunch of clean rules that tell us what a Python program
 
 One question lingers: **what is the parser actually doing**?
 
-A parser's job, vaguely, is to take unstructured stuff and turn it into structured stuff. In this case, we take in a string representing the contents of a Python file, and output a structure called an *Abstract Syntax Tree*, or AST.
+A parser's job, vaguely, is to take unstructured stuff and turn it into structured stuff. In this case, we take in a string representing the contents of a Python file, and output a structure called an *abstract syntax tree*, or AST.
 
 The idea behind constructing an AST is to represent a program as a tree, which (hopefully) makes program execution a fancy tree walk.
 
-At least in Python, all valid programs can be represented as trees of syntax. For example, a `while` statement will have a predicate and a body, which can itself contain more `while` statements.
+For example, consider the expression `1 + 1 * 2`. According to order of operations, we want to evaluate this as `1 + (1 * 2)`. We can represent this as a tree:
 
-If we consider each expression or statement a node in a tree, then each thing in the body of the `while` is a child of the `while` statement.
+<center><img src="/images/arith-ast.png" alt="brains" height="300px"/></center>
 
- As a result, you can destructure the Python source into trees and subtrees.
+In order to evaluate the addition, we must traverse and return from the multiplication subtree.
 
-Let's look at the AST for the very short Python program `def cowfun(): return 'cow'` that we saw earlier.
+In Python, all valid programs can be represented as trees of syntax much like this one, except the nodes can be any statement or expression, not just numbers and operators. For example, a `while` statement will have a predicate and a body, which can itself contain more `while` statements.
 
-The command at the top of the code snipped below runs this small program through the parser in [my lexing/parsing suite](https://github.com/hausdorff/pyli), whose source I've been showing you this whole time.
+As a concrete example, let's look at the AST for the very short Python program `def cowfun(): return 'cow'` that we saw earlier.
 
 ```scheme
 > echo "def cowfun(): return 'cow'" | make pyli
@@ -185,13 +185,15 @@ The command at the top of the code snipped below runs this small program through
      "cow"))))
 ```
 
-The tree here is represented as a LISPy list of lists. Here we see that `def` is a child of `program`. Similarly, the name `cowfun` and the `return` statement are children of `def`. **The LISPy AST is the ultimate output of the parsing functions I showed you earlier.** You specify the rules of Python, then you run the parse using functions from the parsing library, and what you get out is an AST.
+The command at the top of the code snipped below runs this small program through the parser in [my lexing/parsing suite](https://github.com/hausdorff/pyli), whose source I've been showing you this whole time.
+
+The resulting tree is represented as a LISPy list of lists. Here we see that `def` is a child of `program`. Similarly, the name `cowfun` and the `return` statement are children of `def`. **The LISPy AST is the ultimate output of the parsing functions I showed you earlier.** You specify the rules of Python, then you run the parse using functions from the parsing library, and what you get out is an AST.
 
 If you don't do well with fancy LISPy trees, we can vizualize it using the `dot` command from the [Graphviz](http://www.graphviz.org/) suite.
 
 <center><img src="/images/simple-python-ast.png" alt="brains" height="300px"/></center>
 
-From here you can do all sorts of things. You can optimize the code by transforming the tree. You can make a Python-to-X (where X is C++ or something) compiler by transforming the code into an AST for a different language and doing an inorder traversal that emits the code in a target language language.
+From here you can do all sorts of things. You can evaluate and run the code. You can optimize the code by transforming the tree. You can make a Python-to-X (where X is C++ or something) compiler by transforming the code into an AST for a different language and doing an inorder traversal that emits the code in a target language.
 
 And so on.
 
