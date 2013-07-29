@@ -168,7 +168,7 @@ The idea behind constructing an AST is to represent a program as a tree, which (
 
 For example, consider the expression `1 + 1 * 2`. According to order of operations, we want to evaluate this as `1 + (1 * 2)`. We can represent this as a tree:
 
-<center><img src="/images/arith-ast.png" alt="brains" height="300px"/></center>
+<center><img src="/images/arith-ast.png" alt="brains" height="200px"/></center>
 
 In order to evaluate the addition, we must traverse and return from the multiplication subtree.
 
