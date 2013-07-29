@@ -250,6 +250,8 @@ For the future, I would propose the following.
 
 *If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/). The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met. Working around them has been a joy and an inspiration. Their thoughtful feedback and enthusiasm gave me the energy and the tools I needed to be able to approach the work you see here.*
 
+*Finally, a big thank you to [David Albert](dave.is), [Scott Feeney](scott.mn), and [Martin Törnwall](www.twitter.com/martintornwall) for reviewing preliminary versions of this article.*
+
 
 <p></p><br/>
 <p></p><br/>
