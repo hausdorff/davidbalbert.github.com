@@ -185,7 +185,7 @@ As a concrete example, let's look at the AST for the very short Python program `
      "cow"))))
 ```
 
-The command at the top of the code snipped below runs this small program through the parser in [my lexing/parsing suite](https://github.com/hausdorff/pyli), whose source I've been showing you this whole time.
+The command at the top of this code snippet runs this small program through the parser in [my lexing/parsing suite](https://github.com/hausdorff/pyli), whose source I've been showing you this whole time.
 
 The resulting tree is represented as a LISPy list of lists. Here we see that `def` is a child of `program`. Similarly, the name `cowfun` and the `return` statement are children of `def`. **The LISPy AST is the ultimate output of the parsing functions I showed you earlier.** You specify the rules of Python, then you run the parse using functions from the parsing library, and what you get out is an AST.
 
