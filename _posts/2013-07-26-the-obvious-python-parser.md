@@ -166,7 +166,7 @@ A parser's job, vaguely, is to take unstructured stuff and turn it into structur
 
 The idea behind constructing an AST is to represent a program as a tree, which (hopefully) makes program execution a fancy tree walk.
 
-For example, consider the expression `1 + 1 * 2`. According to order of operations, we want to evaluate this as `1 + (1 * 2)`. We can represent this as a tree:
+For example, consider the expression `1 + 3 * 2`. According to order of operations, we want to evaluate this as `1 + (3 * 2)`. We can represent this as a tree:
 
 <center><img src="/images/arith-ast.png" alt="brains" height="200px"/></center>
 
@@ -250,7 +250,7 @@ For the future, I would propose the following.
 
 *If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/). The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met. Working around them has been a joy and an inspiration. Their thoughtful feedback and enthusiasm gave me the energy and the tools I needed to be able to approach the work you see here.*
 
-*Finally, a big thank you to [David Albert](dave.is), [Scott Feeney](scott.mn), and [Martin Törnwall](www.twitter.com/martintornwall) for reviewing preliminary versions of this article.*
+*Finally, a big thank you to [David Albert](http://www.dave.is), [Scott Feeney](http://www.scott.mn), and [Martin Törnwall](http://www.twitter.com/martintornwall) for reviewing preliminary versions of this article.*
 
 
 <p></p><br/>
