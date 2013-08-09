@@ -47,7 +47,7 @@ This leaves two questions:
 
 Our C code that actually encodes the binary is [here](https://github.com/hausdorff/apple2e-audio-transport).
 
-The official description of the protocol is [here](http://support.apple.com/kb/TA40730). The gist is this.
+The official description of the protocol is here: [part 1](http://support.apple.com/kb/TA40730), [part 2](http://support.apple.com/kb/TA40737). The gist is this.
 
 A machine language program is transmitted using a *record*. A record is a block of binary data which, in this case, is formatted as follows.
 
