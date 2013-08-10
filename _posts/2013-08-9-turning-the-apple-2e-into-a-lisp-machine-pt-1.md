@@ -102,7 +102,7 @@ Part 2 of this series will be about actually implementing lisp on the Apple //e.
 <p></p><br/>
 <p></p><br/>
 
-*If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/), which is where this work was done. See some [other stuff](/obvious-python-parser.html) I did at Hacker School for more reference points. The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met. Working around them has been a joy and an inspiration. Their thoughtful feedback and enthusiasm gave me the energy and the tools I needed to be able to approach the work you see here.*
+*If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/), which is where this work was done. See some [other stuff](/obvious-python-parser.html) I did at Hacker School for more reference points. The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met. Working around them has been a joy and an inspiration.*
 
 
 
