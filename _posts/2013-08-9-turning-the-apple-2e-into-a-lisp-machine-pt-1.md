@@ -26,6 +26,7 @@ Code for the prototype is [here](https://github.com/hausdorff/turtles)---the REA
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/tey9sFqICSk" frameborder="0" allowfullscreen></iframe>
 
+<p></p>
 
 ## The Apple //e deployment pipeline
 
