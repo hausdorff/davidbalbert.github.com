@@ -7,7 +7,7 @@ permalink: apple-2-lisp-part-1.html
 
 The [Hacker School](https://www.hackerschool.com/) space has an old Apple //e sitting around.
 
-Due to the fact that we are hackers, my friend [Martin Törnwall](http://www.twitter.com/martintornwall) and I decided to turn it into a lisp machine.
+Due to the fact that we are hackers, my friend [Martin Törnwall](http://www.twitter.com/martintornwall) and I decided to turn it into a lisp machine. (**Full source available [here](https://github.com/hausdorff/turtles)**.)
 
 The main obstacle was not developing the lisp itself. It was that developing software on the Apple //e was astonishingly painful:
 
@@ -41,7 +41,7 @@ This leaves two questions:
 1. How do we encode a binary as audio data?
 2. How does the Apple interpret it?
 
-<p>
+<p></p>
 
 
 ## Encoding the binary as audio data
