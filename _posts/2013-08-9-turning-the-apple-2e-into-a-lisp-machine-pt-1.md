@@ -27,7 +27,7 @@ Code for the prototype is [here](https://github.com/hausdorff/turtles)---the REA
 <iframe width="560" height="315" src="//www.youtube.com/embed/tey9sFqICSk" frameborder="0" allowfullscreen></iframe>
 
 
-## The Apple //e deployment pipleline
+## The Apple //e deployment pipeline
 
 The Apple //e has a built-in mechanism to take audio data in, decode it as binary data, and drop it into a contiguous chunk of memory.
 
