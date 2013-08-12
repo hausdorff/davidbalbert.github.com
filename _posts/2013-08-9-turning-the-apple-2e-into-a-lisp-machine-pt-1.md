@@ -19,6 +19,8 @@ But, while we didn't have extra floppy disks, we did have our laptops.
 
 So, we ended up writing some C code that allows us to encode arbitrary binary data as an *audio signal*.
 
+*(UPDATE: This C code is located [here](https://github.com/hausdorff/apple2e-audio-transport), and as [lscharen points out](https://news.ycombinator.com/item?id=6200537), it should be noted that it is very much derivative of David Schmidt's excellent [ADTPro library](http://adtpro.cvs.sourceforge.net/).)*
+
 Using this, we were able to write the lisp prototype on our laptops, and simply transmit the program via the audio jack to the Apple //e.
 
 Code for the prototype is [here](https://github.com/hausdorff/turtles)---the README contains a reasonably complete explanation of what is possible, and the code is vaguely readable. A demonstration of the system in action is below. Following the video is a discussion of how the deployment code works.
