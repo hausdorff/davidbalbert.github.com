@@ -284,7 +284,7 @@ The line `GLOBAL: expr;` is a hack that allows us to skip global declaration of 
 
 ## Using it in real projects!
 
-In the makefile, you can see that I compile the souce with the command `ocamlc -pp "camlp4o pa_extend.cmo q_MLast.cmo" -I +camlp4 -c where.ml`.
+In the [Makefile](https://github.com/hausdorff/ocaml-where/blob/master/Makefile), you can see that I compile the souce with the command `ocamlc -pp "camlp4o pa_extend.cmo q_MLast.cmo" -I +camlp4 -c where.ml`.
 
 This results in `where.cmo`.
 
