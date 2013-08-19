@@ -41,7 +41,7 @@ Here I'll walk through the process of building such extension.
 
 Extensions to OCaml core syntax are added in a step that happens just before compilation. It is called *preprocessing*.
 
-Preprocessing works a lot like lisp's macro system. We take as input some OCaml source with this new modified syntax (*e.g.*, the `where` keyword), and transform it into "regular" OCaml. From here, it gets passed to the regular OCaml compiler, and turned into a real binary.
+Preprocessing works a lot like lisp's macro system. We take as input some OCaml source with our new modified syntax (*e.g.*, the `where` keyword), and transform it into "regular" OCaml. From here, it gets passed to the regular OCaml compiler, and turned into a real binary.
 
 So, for example, say you wrote this silly program using `where` syntax.
 
@@ -94,11 +94,13 @@ If you actually look through the revised parser, you'll eventually see that it d
             <:expr< let $rec:rf$ $lb$ in $e$ >> ]
 ```
 
-But then, in the official OCaml parser, at the bottom of the file ([here](https://github.com/diml/ocaml-3.12.1-print/blob/master/camlp4/Camlp4Parsers/Camlp4OCamlParser.ml#L137)) the `where` keyword is actually *deleted*! So it has the rule, and then removes the rule. Who knows why, but we can thank them because their version is not great, and it gives us the opportunity to do it right! :)
+But then, in the official OCaml parser, at the bottom of the file ([here](https://github.com/diml/ocaml-3.12.1-print/blob/master/camlp4/Camlp4Parsers/Camlp4OCamlParser.ml#L137)) the `where` keyword is actually *deleted*! So it has the rule, and then removes the rule.
 
 ```ocaml
 DELETE_RULE Gram expr: SELF; "where"; opt_rec; let_binding END;
 ```
+
+Who knows why, but we can thank them because their version is not great, and it gives us the opportunity to do it right! :)
 
 Overall, this is a pretty big win for us. It tells us where in the grammar we want to put our `where` rule, and it gives us a nice starting implementation which initially kind of sucks, but which we can modify to suit our needs.
 
