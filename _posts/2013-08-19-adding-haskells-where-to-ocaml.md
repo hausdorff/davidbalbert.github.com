@@ -282,6 +282,18 @@ It is probably obvious that the line `END` indicates that we're done `EXTEND`'in
 The line `GLOBAL: expr;` is a hack that allows us to skip global declaration of the entry `let_binding_seq`. You have to globally declare each entry not specified in this way, and we'd rather not do that for a variety of reasons. Note that `expr` already exists in the OCaml grammar, while `let_binding_seq` only exists locally.
 
 
+## Using it in real projects!
+
+In the makefile, you can see that I compile the souce with the command `ocamlc -pp "camlp4o pa_extend.cmo q_MLast.cmo" -I +camlp4 -c where.ml`.
+
+This results in `where.cmo`.
+
+At this point, you can link it into whatever project you have, *e.g.*, `camlc -pp "ocamlp4o ./where.cmo" your_ml_file_here.ml`.
+
+To see the desugared version of your source code, you can run `camlp4o where.cmo your_ml_file_here.ml`.
+
+The only issue is that it might not be usable with other extensions, but that is sort of the way these things go.
+
 
 ## Wrapping it all up
 
