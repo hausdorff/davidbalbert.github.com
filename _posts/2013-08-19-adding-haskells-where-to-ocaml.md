@@ -39,7 +39,7 @@ Here I'll walk through the process of building such extension.
 
 ## OCaml Syntax extensions, the 10,000-foot view
 
-Extensions to OCaml core syntax are added in a step that happens just before passing everything to the compiler. It is called *preprocessing*.
+Extensions to OCaml core syntax are added in a step that happens just before compilation. It is called *preprocessing*.
 
 Preprocessing works a lot like lisp's macro system. We take as input some OCaml source with this new modified syntax (*e.g.*, the `where` keyword), and transform it into "regular" OCaml. From here, it gets passed to the regular OCaml compiler, and turned into a real binary.
 
