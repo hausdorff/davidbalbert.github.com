@@ -114,7 +114,7 @@ The OCaml preprocessing step is usually done by a utility like `Camlp4` or `Caml
 
 Both `Camlp4` and `Camlp5` are woefully underdocumented. Personally, I had better luck with `Camlp4`, so that's what we'll use to extend OCaml here.
 
-For the rest ofthis section, our objectives are to:
+For the rest of this section, our objectives are to:
 
 1. fix the `where` rule so that it doesn't suck anymore, and
 2. glue this new rule into the OCaml grammar.
@@ -132,13 +132,11 @@ entryname: [ "levelname"
 Collectively, this is known as a `Camlp4` *entry*. An entry, very vaguely, contains a list of patterns to find (specified as [context-free grammars](http://en.wikipedia.org/wiki/Context-free_grammar) aka CFGs), and tells us what to do with them once we've found them.
 
 * Entries have *names*, like `entryname`. These are like function names---they exist so that other entries can refer to the pattern by name, making it easy to reuse old patterns.
-* The entry itself---everything between the name of the entry (`entryname`) and the semicolon at the end of the code segment. Think of this as a list of *levels*---we'll see in a minute what levels are.
+* The entry itself---everything between the name of the entry (in this case, `entryname`) and the semicolon at the end of the code segment. Think of this as a list of *levels*---we'll see in a minute what levels are.
 * An entry consists of a bunch of *levels*. This example contains two levels: `[ pattern -> what_to_do_once_we've_found_pattern ]` and `[ another_pattern -> etc ]`. Each level can have a name---the name of our first level is `"levelname"`. Each level contains a pattern, like `pattern`, which are written as CFGs. We can define functions like `what_to_do_once_we've_found_pattern` that tell us what to do once we've found a pattern. In general, you can group levels under the same entry to conveniently do things like make operator precedence. We don't care that much about that part of levels here, but if you're interested, there is a more detailed description [here](http://ambassadortothecomputers.blogspot.co.uk/2010/05/reading-camlp4-part-6-parsing.html).
 * An entry can contain an optional *insertion position*, which tells us where in the grammar to put this new rule. This rule doesn't have an insertion position, but we'll make one when we modify it. Stay tuned.
 
-Armed with this knowledge, we're ready to try to understand the old version of `where`.
-
-Here's the old version:
+Armed with this knowledge, we're ready to try to understand the old version of `where`. Let's have a look:
 
 ```ocaml
 expr: 
@@ -150,7 +148,7 @@ expr:
 
 So it's an entry called `expr`, which contains one level called `"where"`.
 
-Let's look at that pattern, `e = SELF; "where"; rf = opt_rec; lb = let_binding`. The first part, `e = SELF`, is just a recursive call to `expr`, stored in the variable `e`---they could have just written `e = expr`, but for some reason they didn't. We store the result in the variable `e` because we want to use the result later.
+The pattern in this case is: `e = SELF; "where"; rf = opt_rec; lb = let_binding`. The first part, `e = SELF`, is just a recursive call to `expr`, stored in the variable `e`---they could have just written `e = expr`, but for some reason they didn't. We store the result in the variable `e` because we want to use the result later.
 
 The second part matches the string literal `"where"`. So, that means that so far we're looking for a pattern like "SOME_EXPRESSION `where` *blah*".
 
@@ -164,24 +162,24 @@ Let's break this down. (This will be easier if you know about lisp quotations.) 
 
 In our old `where` entry, `OCAML_CODE` would be `let $rec:rf$ $lb$ in $e$`. But notice that `rf`, `lb`, and `e` are all variables that were defined in the parsing pattern!
 
-This is important because this code is basically taking those variables and splicing them into a let statement. More specifically, if you write `let $lb$ ...` and `lb` is an expression like `x = 10`, then the result is `let x = 10 ...`, since the `$` tell `Camlp4` that we want to splice the value of `lb` into the current expression.
+This is important because this code is basically taking those variables and splicing them into a `let` expression. More specifically, if you write `let $lb$ ...` and `lb` is an expression like `x = 10`, then the result is `let x = 10 ...`, since the `$`s tell `Camlp4` that we want to splice the value of `lb` into the current expression literal.
 
-So, to complete the example, if we wrote `let x = z where z = 10`, then `rf` would be empty (since there's no `rec` keyword here), `lb` would be `z = 10`, and `e` would be `z`. Thus, due to splicing, the new `let` statement would be `let x = let z = 10 in z`. Confusing, ugly, but equivalent.
+So, to complete the example, if we wrote `let x = z where z = 10`, then `rf` would be empty (since there's no `rec` keyword here), `lb` would be `z = 10`, and `e` would be the expression `z`. Thus, due to splicing, the new `let` statement would be `let x = let z = 10 in z`. Confusing, ugly, but equivalent.
 
-This leaves one question. What does the quoting actually do? What is `rule_handler`? The abbreviated explanation is that `<:rule_handler< OCAML_CODE >>` will take some newly-spliced chunk of `OCAML_CODE` and expand it out to an AST in preparation for handing it off to the OCaml compiler. How it is expanded is determined by the handler `rule_handler`. But the effect is to take some new bit of syntax (in our case, the `where` keyword), rewrite it as "standard" OCaml, and then hand that to the compiler, which will turn it into an executable.
+This leaves one question. What does the quoting actually do? What is `rule_handler`? The abbreviated explanation is that `<:rule_handler< OCAML_CODE >>` will take some newly-spliced chunk of `OCAML_CODE` and expand it out to an AST in preparation for handing it off to the OCaml compiler. How it is expanded is determined by the handler `rule_handler`---someone registers a function to call to do the expansion, and it is called when we see the pattern. In the end, though, the effect is to take some new bit of syntax (in our case, the `where` keyword), rewrite it as "standard" OCaml, and then hand that to the compiler, which will turn it into an executable.
 
 At this point we understand pretty much everything about the old rule, and we're ready to fix it up to be more like Haskell's `where`.
 
 ## Fixing up the old `where`
 
-The problem with the old `where` is that we are only allowed to have one expression. That is the following is allowed:
+The problem with the old `where` is that we are only allowed to have one expression. In other words, the following is allowed:
 
 ```ocaml
 let x = z
   where z = 20
 ```
 
-But the following is not, because it has two expressions:
+But, on the other hand, this other example is not allowed, because it has two binding expressions:
 
 ```ocaml
 let x = z
@@ -189,7 +187,7 @@ let x = z
         z = 20
 ```
 
-So our task is to extend the above rule to account for this. My solution is this (see full source [here](https://github.com/hausdorff/ocaml-where/blob/master/where.ml)):
+So our task is to extend the above rule to account for this. My solution the following (see full source [here](https://github.com/hausdorff/ocaml-where/blob/master/where.ml)):
 
 ```ocaml
 let_binding_seq: [[ rf = opt_rec; lb = let_binding -> (rf,lb) ]];
@@ -200,11 +198,11 @@ expr: BEFORE ":="
   ];
 ```
 
-There are only a couple changes here. The first is to add an entry, `let_binding_seq` which basically matches a single `let_binding`, which may or may not be recursive. It emits them as a tuple, which makes it convenient to splice them in later.
+There are only a couple changes here. The first is to add an entry, `let_binding_seq` which basically matches a single `let_binding`, and an optional keyword, `rec`. It emits them as a tuple, which makes it convenient to splice the parse results together later.
 
-Inside the `expr` entry, we match the `where` keyword, and then following that is a list of one or more `let_binding_seq`s separated by the keyword `and`---this is denoted as `LIST1 let_binding_seq SEP "and"`.
+Inside the `expr` entry, we match the `where` keyword, and then following that is a list of one or more `let_binding_seq`s, each separated by the keyword `and`---this is denoted as `LIST1 let_binding_seq SEP "and"`.
 
-Note that this diverges somewhat from the Haskell syntax. In Haskell, we'd write something like this:
+Important note: this syntax diverges somewhat from the Haskell syntax. In Haskell, we'd write something like this:
 
 ```haskell
 foo x = z
@@ -220,7 +218,7 @@ let foo x = z
         z = y*2
 ```
 
-The reason for this is that a rule used to define `let_binding` (specifically, `fun_binding`, as we see [here](https://github.com/diml/ocaml-3.12.1-print/blob/master/camlp4/Camlp4Parsers/Camlp4OCamlRevisedParser.ml#L779)) is right-associative and would group the above as `let y = (x+2; z = y*2)`, which is not what we want. By interspersing `and` between the bindings, we force the parser to break them up correctly.
+The reason for this is that one of the entries that `let_binding` depends on (specifically, `fun_binding`, as we see [here](https://github.com/diml/ocaml-3.12.1-print/blob/master/camlp4/Camlp4Parsers/Camlp4OCamlRevisedParser.ml#L779)) is right-associative and would group the above as `let y = (x+2; z = y*2)`, which is not what we want. By interspersing `and` between the bindings, we force the parser to break them up correctly.
 
 Notice also that after declaring `expr` we see `BEFORE ":="`. This is the location rule we talked about earlier---it basically puts this entry before the entry for `:=`. We want this because in the original grammar, [you can see](https://github.com/diml/ocaml-3.12.1-print/blob/master/camlp4/Camlp4Parsers/Camlp4OCamlRevisedParser.ml#L616) that `where` appears just before the entry for `:=`.
 
