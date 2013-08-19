@@ -21,7 +21,7 @@ Gross. That returns `z` if you didn't catch it---it's not very readable.
 In Haskell, there is a convenient solution to this problem: the `where` keyword.
 
 ```haskell
--- if we were writing this in Hasekell:
+-- if we were writing this in Haskell:
 foo x = z
   where y = x+2
         z = y*2
