@@ -24,7 +24,7 @@ Based on this valuation, Twitter looks to raise $1 billion.
 
 They need these funds primarily for growth, and especially for flexibility in competing with companies like Facebook. But if Twitter plans to grow, it's prudent to ask where they are now.
 
-Their revenue is closing in quickly on nine digits, and growing precipitously. Monthly actives were 218 million in June 2013, up from 151 million in June 2012, and 169 million of these users were located outside the US. Twitter is a product that is inherently mobile, and their mobile metrics look good in ways that Facebook's don't, which could be a serious advantage down the road.
+Their yearly revenue is closing in quickly on ten digits, and growing precipitously. Monthly actives were 218 million in June 2013, up from 151 million in June 2012, and 169 million of these users were located outside the US. Twitter is a product that is inherently mobile, and their mobile metrics look good in ways that Facebook's don't, which could be a serious advantage down the road.
 
 Depending on where you stand on these metrics, you will either agree or disagree that a capital injection will give Twitter the leverage they need to pursue the high-impact growth opportunities. In either event, there is certainly no shortage of problems they will probably need to solve:
 
