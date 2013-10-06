@@ -5,7 +5,7 @@ permalink: twitters-ipo-in-simple-terms.html
 ---
 
 
-The short answer is that this is looking good for Twitter, but the particulars of why the timing here is so excellent are actually really interesting.
+The short answer to the question of why Twitter is IPO'ing now is that the timing is *excellent*, but the particulars of why this is true are actually really interesting.
 
 ## Next year would be a comparatively bad time to file.
 Right now, the Jumpstart Our Business Startups (JOBS) act allows "emerging" companies like Twitter to file confidentially. This allows them to (1) avoid a lot of the hype problems Facebook had to deal with, and (2) allows them to address finance questions from the SEC in private, which allows them to largely avoid the problems Groupon ran into.
