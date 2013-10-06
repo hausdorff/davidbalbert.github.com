@@ -13,14 +13,14 @@ Right now, the Jumpstart Our Business Startups (JOBS) act allows "emerging" comp
 The reason they are filing confidentially *now* is because they're on track to make $1 billion in the fiscal year, which is the cutoff for eligibility for filing as an emerging company under the JOBS act. So, this is probably their last chance to file confidentially, and their last chance to show they learned something from the pain of their predecessors.
 
 ## The climate for a Twitter IPO is quite good right now.
-Stocks of similar Internet companies are doing well (or, in certain cases, better), so investors are likely to look favorably on a Twitter IPO. A very good sign is that Facebook is up to ~$50/share, which is well above their listing price of $38. Other recent-ish IPOs, like LinkedIn are also doing well, but the recovery of Facebook (and, to a lesser extent, Groupon) is what investors will be thinking of, due comparatively painful experience.
+Stocks of similar Internet companies are doing well (or, in certain cases, better), so investors are likely to look favorably on a Twitter IPO. A very good sign is that Facebook is up to ~$50/share, which is well above their listing price of $38. Other recent-ish IPOs, like LinkedIn, are also doing well, but the recovery of Facebook (and, to a lesser extent, Groupon) is what investors will be thinking of, due comparatively painful experience.
 
-The one obvious issue with IPO'ing right now is the government shutdown. Historically IPOs are very sensitive to market context, and perturbations like shutting down big swaths of government functionality are likely to make investors more cautious. Still, it's hard to predict how specifically this will affect Twitter, and management is still holding enough enough cards (and holding them closely enough) that they will probably pull out of this ahead.
+The one obvious issue with IPO'ing right now is the government shutdown. Historically IPOs are very sensitive to market context, and perturbations like shutting down big swaths of the government are likely to make investors more cautious. Still, it's hard to predict how specifically this will affect Twitter, and management is still holding enough enough cards (and holding them closely enough) that they will probably pull out of this ahead.
 
 ## Twitter needs the IPO.
 Because the filling was private, the valuation comes from an internal audit -- they value themselves at $20.62/share for a total implied valuation of $9.7 billion.
 
-Based on this valuation, Twitter looks to be raising $1 billion.
+Based on this valuation, Twitter looks to raise $1 billion.
 
 They need these funds primarily for growth, and especially for flexibility in competing with companies like Facebook. But if Twitter plans to grow, it's prudent to ask where they are now.
 
@@ -32,7 +32,9 @@ Depending on where you stand on these metrics, you will either agree or disagree
 * In America, they make about $2 per 1000 views. But outside America, they make just $0.30 per 1000 views. In their own documents they admit that capitalizing on foreign markets could require very serious consumption of resources. This is worrying in the long term because 300 million people live in the US, while 6 billion people live elsewhere. So, what is their plan for real growth?
 * They are arguably much better suited to mobile than Facebook -- important because mobile is the place where Facebook is decidedly not dominant, and may actually never be dominant. How, if at all do they plan to exploit this? Especially abroad.
 
-There are more issues like these, of course -- you could go on for hours talking about them. But the point is not that these issues can't be defeated, but that it would be *much* harder to do so without the capital Twitter is asking for. So the question for Twitter is, can they afford to ask for the money now? Given the timing, it's hard for me to see how they can *not* afford to ask now.
+There are more issues like these, of course -- you could go on for hours talking about them. But the point is not that these issues can't be defeated, but that it would be *much* harder to do so without the capital Twitter is asking for. So the question for Twitter is, can they afford to ask for the money now?
+
+Given the timing, it's hard for me to see how they can *not* afford to ask now.
 
 
 ## Conclusions
