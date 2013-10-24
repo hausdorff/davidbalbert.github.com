@@ -214,6 +214,27 @@ ul.posts {
         border: 0;
       }
 
+.site .theory {
+  color: #d5000d;
+  display:inline-block;
+  width: 1em;
+  text-align: center;
+}
+
+.site .technique {
+  color: blue;
+  display:inline-block;
+  width: 1em;
+  text-align: center;
+}
+
+.site .analysis {
+  color: #00FF00;
+  display:inline-block;
+  width: 1em;
+  text-align: center;
+}
+
 /*****************************************************************************/
 /*
 /* Posts

@@ -2,6 +2,7 @@
 layout: post
 title: Motivating the Bayesian prior with de Finetti's theorem
 permalink: motivating-bayesian.html
+theory: •
 ---
 
 The modern axiomatization of probability theory (proposed in 1933 by [Andrey Kolmogorov](http://en.wikipedia.org/wiki/Andrey_Kolmogorov)) was designed to provide a measure-theoretic *probability calculus*, that is, a definition of the rules for constructing and manipulating mathematical statements involving probabilities. Unfortunately, this axiomatization only tells us how to manipulate probabilities---it does not tell us what they are or how to interpret them. This is one reason why there are different constructive specifications for computing probabilities, *e.g.*, the Bayesian and frequentist perspectives.

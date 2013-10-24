@@ -2,6 +2,7 @@
 layout: post
 title: Twitter's IPO in simple terms
 permalink: twitters-ipo-in-simple-terms.html
+analysis: •
 ---
 
 

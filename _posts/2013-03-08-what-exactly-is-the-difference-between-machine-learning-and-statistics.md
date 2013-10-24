@@ -2,6 +2,9 @@
 layout: post
 title: What exactly is the difference between machine learning and statistics?
 permalink: ml-vs-stats.html
+theory: •
+analysis: •
+technique: •
 ---
 
 I often get asked about the difference between statistics and machine learning. It is a tricky distinction because some things that were invented for ML (*e.g.*, PAC theory) also get a lot of play in statistics journals, and vice-versa.
