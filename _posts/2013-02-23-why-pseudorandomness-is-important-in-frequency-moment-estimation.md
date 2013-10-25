@@ -2,7 +2,7 @@
 layout: post
 title: Why psuedorandomness is important in frequency moment estimation
 permalink: freq-moments.html
-theory: •
+theory: ■
 ---
 
 Finding the `\( p \)`-th frequency moment, denoted `\( F_p \)`, is one of the most well-studied problems in streaming algorithms, with a broad set of applications ranging from traffic monitoring on networks, to efficient entropy estimation, to database query optimization. In the streaming setting, this task amounts to computing `\( F_p(\mathbf{x}) = \sum_{i=1}^n |x_i|^p \)` where `\( p>0 \)` and `\( \mathbf{x} \)` is a very very high dimensional vector that is being continuously updated.

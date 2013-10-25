@@ -2,7 +2,7 @@
 layout: post
 title: Turning the Apple //e into a lisp machine, part 1
 permalink: apple-2-lisp-part-1.html
-technique: •
+technique: ■
 ---
 
 

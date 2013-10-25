@@ -2,8 +2,8 @@
 layout: post
 title: The obvious Python parser
 permalink: obvious-python-parser.html
-theory: •
-technique: •
+theory: ■
+technique: ■
 ---
 
 

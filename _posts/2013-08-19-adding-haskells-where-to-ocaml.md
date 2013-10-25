@@ -2,7 +2,7 @@
 layout: post
 title: Adding Haskell's `where` keyword to OCaml
 permalink: adding-haskells-where-to-ocaml.html
-technique: •
+technique: ■
 ---
 
 
