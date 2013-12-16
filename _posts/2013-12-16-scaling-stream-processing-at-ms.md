@@ -5,7 +5,7 @@ permalink: scaling-systems-at-ms.html
 technique: ■
 ---
 
-One of the serious disadvantages of working at a place like Microsoft is that everything is built for scale, even prototypes. When we roll something out, it gets used[*]. There is no slapping something up in Django "to see if it works" because it only works if it works for millions of clients immediately.
+One of the serious disadvantages of working at a place like Microsoft is that *everything* is built for scale, even prototypes. When we roll something out, it gets used[*]. There is no slapping something up in Django "to see if it works" because it only works if it works for millions of clients immediately.
 
 When you build systems in this way, the problems of scale are more brutal and more obvious than when you slowly ramp up over time. Scaling gradually basically consists of putting out a series of fires; scaling at MS is like being lit on fire.
 
