@@ -12,7 +12,7 @@ When you build systems in this way, the problems of scale are more brutal and mo
 Here are some things that I've learned the hard way.
 
 
-## A transparent and optimizable runtime is as important as availability of good programming abstractions (*e.g.*, lisp macros, lambdae, *etc*.).
+## A transparent and optimizable runtime is as important as availability of good programming abstractions (*e.g.*, lisp macros, lambdas, *etc*.).
 
 When developing systems that must scale *immediately* to millions of users, it is necessary to be able to reason both about what the code means (*e.g.*, "this code sorts numbers") *AND* how the code behaves (*e.g.*, "slower for in-memory sorting but much faster over network").
 
