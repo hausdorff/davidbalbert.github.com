@@ -77,6 +77,8 @@ It should be a core objective to flesh out test cases that cover the essence of 
 
 As you develop, these tests should be iterated and maintained as you write the code.
 
+Again, **you should do this *before* you write code**, or your debugging will basically consist of running something over a cluster of dozens of badly-behaving machines, and simply waiting for the error. You will have to manually instrument your code with logging to catch the error, and you will be upset that you didn't invest the time to catch the error beforehand.
+
 This takes a lot of discipline but it is so, so worth it in the long run.
 
 
