@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Why psuedorandomness is important in frequency moment estimation
+comments: true
 permalink: freq-moments.html
 theory: ■
 ---

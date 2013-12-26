@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adding Haskell's `where` keyword to OCaml
+comments: true
 permalink: adding-haskells-where-to-ocaml.html
 technique: ■
 ---
@@ -310,9 +311,6 @@ The most challenging part of this journey was the incredibly sparse documentatio
 * Begrudgingly, I acknowledge the woefully out-of-date official [`Camlp4` tutorials](http://caml.inria.fr/pub/docs/tutorial-camlp4/). Sometimes you can follow along until something is wrong and still get something out of it. Often contains broken English in addition to broken code. I looked heavily at [lambdas](http://caml.inria.fr/pub/docs/tutorial-camlp4/tutorial004.html), [tutorial 7](http://caml.inria.fr/pub/docs/tutorial-camlp4/tutorial007.html), [tutorial 3](http://caml.inria.fr/pub/docs/tutorial-camlp4/tutorial003.html)
 * There was a [denser tutorial](http://mjambon.com/extend-ocaml-syntax.html) that I didn't get around to looking at.
 
-
-
-<p></p><br/>
 <p></p><br/>
 
 *If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/), which is where this work was done. See some [other stuff](/obvious-python-parser.html) I did at Hacker School for more reference points. The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met. Working around them has been a joy and an inspiration.*

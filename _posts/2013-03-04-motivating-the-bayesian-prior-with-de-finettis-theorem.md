@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Motivating the Bayesian prior with de Finetti's theorem
+comments: true
 permalink: motivating-bayesian.html
 theory: ■
 ---

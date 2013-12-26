@@ -1,6 +1,7 @@
 ---
 layout: post
 title: General lessons from scaling large systems at Microsoft
+comments: true
 permalink: scaling-systems-at-ms.html
 technique: ■
 ---
@@ -92,50 +93,14 @@ This is a shortcut that is not obvious, but it will save you a lot of time in th
 For Christ's sake. Keep your devs sane.
 
 
-<p></p><br/>
-<p></p><br/>
-
+## Footnotes
 
 \* Well, ok, sometimes our products *don't* get used. But here at Microsoft we like to remain optimistic!
 
-<p></p><br/>
 <p></p><br/>
 
 *If you enjoyed this post, you should consider applying to work on my team at Microsoft. Drop me a line and we can chat: `clemmer.alexander@gmail.com`*
 
 *Finally, a big thank you to [James Dennis](http://j2labs.io/) and Malcom Matalka for reviewing preliminary versions of this article.*
-
-
-<p></p><br/>
-<p></p><br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

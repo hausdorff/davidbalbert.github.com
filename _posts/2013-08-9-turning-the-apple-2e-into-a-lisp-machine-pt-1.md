@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Turning the Apple //e into a lisp machine, part 1
+comments: true
 permalink: apple-2-lisp-part-1.html
 technique: ■
 ---
@@ -102,7 +103,6 @@ If it fails, you get `ERR`.
 
 Part 2 of this series will be about actually implementing lisp on the Apple //e. This includes talking about things like how to get characters (remember that there's no OS, so this is different than normal), printing things to the display, and a discussion of the Apple's odd memory model.
 
-<p></p><br/>
 <p></p><br/>
 
 *If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/), which is where this work was done. See some [other stuff](/obvious-python-parser.html) I did at Hacker School for more reference points. The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met. Working around them has been a joy and an inspiration.*

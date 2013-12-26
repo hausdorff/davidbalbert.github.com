@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The obvious Python parser
+comments: true
 permalink: obvious-python-parser.html
 theory: ■
 technique: ■
@@ -248,43 +249,9 @@ For the future, I would propose the following.
 * Above all, have fun when you do it!
 
 <p></p><br/>
-<p></p><br/>
 
 *If you enjoyed this post, you should consider applying to [Hacker School](https://www.hackerschool.com/). The space is full of some of the [nicest, smartest hackers](https://www.hackerschool.com/residents) I have ever met. Working around them has been a joy and an inspiration. Their thoughtful feedback and enthusiasm gave me the energy and the tools I needed to be able to approach the work you see here.*
 
 *Finally, a big thank you to [David Albert](http://www.dave.is), [Scott Feeney](http://www.scott.mn), and [Martin Törnwall](http://www.twitter.com/martintornwall) for reviewing preliminary versions of this article.*
-
-
-<p></p><br/>
-<p></p><br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

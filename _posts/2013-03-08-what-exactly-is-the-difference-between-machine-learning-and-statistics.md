@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What exactly is the difference between machine learning and statistics?
+comments: true
 permalink: ml-vs-stats.html
 theory: ■
 analysis: ■
