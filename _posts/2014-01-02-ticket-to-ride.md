@@ -15,12 +15,12 @@ By "placeholder", I mean that going to class is like being on a train. On a trai
 
 Ultimately it's critical to do a bit of both. In my school, for example, &mdash; and I suspect this is true of pretty much every school &mdash; there is simply no real coverage for:
 
-* **Reading code.** Most of the emphasis in school is on tools to write code better or faster.
+* **Reading code.** Most of the emphasis in school is on tools to write code better or faster. Unfortunate, because reading is just as important, if not more important.
 * **Evaluating whether code is correct.** This feels like something school should teach you, but I don't think it does. For example, how many people do you think could write quicksort correctly in C, with no errors right off the bat? I don't know any either.
-* **Managing abstractions.** Even in cutting-edge research programming, most of the struggle is in managing lots of abstractions in your head gracefully. "This does this, which results in this", *etc*. Classes like PL introduce you to some tools for managing abstractions but realistically the dominating factor is not whether you've seen it before, but whether you have lots of practice using them.
+* **Managing abstractions.** Even in cutting-edge research programming, most of the struggle of programming is using good abstractions to help you understand complicated systems gracefully. "This does this, which results in this", *etc*. Classes like PL introduce you to some tools for managing abstractions but realistically the dominating factor is not whether you've seen it before, but whether you have lots of practice using them.
 * And so on.
 
-It turns out that a CS degree is just a multi-$10k ticket to ride.
+It turns out that a CS degree is just a multi-$10k ticket to ride. It just gets you on the train. You can do whatever you want on the train.
 
 Developing these skills, in contrast, is mainly a matter of consistent, directed *practice*.
 
