@@ -17,6 +17,7 @@ html, body {
 
 body {
   font: 1.1em helvetica, 'Lato', Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+  font-family: helvetica, 'Lato', sans-serif;
   font-weight: lighter;
   text-align: center;
   color: #4a4a4a;
