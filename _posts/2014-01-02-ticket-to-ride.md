@@ -27,3 +27,7 @@ Developing these skills, in contrast, is mainly a matter of consistent, directed
 The real value of going to school, it seems, is that it lets you ground your practice in the things that you see as you go past them in your school-train. Ultimately, though, you need to put in the legwork to develop skills yourself.
 
 I recognize that things like this can't really be taught, which is why I think that most schools should probably just have internship requirements as part of the degree, like Waterloo does.
+
+<br/>
+
+*Thanks to [Andrew Gwozdziewycz](http://www.apgwoz.com/) and [Sijraaj Khandkar](https://github.com/ibnfirnas) for reviewing preliminary versions of this post.*
