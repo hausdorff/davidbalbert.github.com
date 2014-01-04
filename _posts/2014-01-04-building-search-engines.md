@@ -55,11 +55,9 @@ This should give you a sense of the scale at which these companies operate. Entr
 
 ### Lesson 5: large companies are necessarily limited by their previous investments
 
-Most computers are basically used as Internet access devices. At this point, MS has accepted the transition to being a "devices and services" company.
+People use computers primarily to access the Internet. MS is now a devices and services company, which means its main job is hence to provide the Internet to people as a service. If MS wants to maintain its position as a field leader, it can't just be the OS and the browser used to access the Internet &mdash; it must be a substantive part of the service itself, which means that it needs to be the page peopl land on when they open their browser.
 
-This means that the job of MS is now to supply the Internet as a service to consumers, and in order to do this well, MS cannot only be the OS and the browser that are used to access the Internet. It must also be the landing page. This is the real function of bing, and if MS gives up on it, it might as well give up on all consumer investments.
-
-For this reason, it is more important that Bing (for the moment) that Bing exists than it is that it is equal to or better than Google in every way.
+And that is what Bing is. For this reason, it is more important that Bing (for the moment) that Bing exists than it is that it is equal to or better than Google in every way.
 
 Of course, it is a huge priority to make Bing better, but this is not the only consideration MS must make.
 
