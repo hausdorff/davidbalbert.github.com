@@ -24,11 +24,13 @@ What's worse is that the problem is not even that we need to buy such a team. MS
 Thus, to be a viable threat to Google, you will need to take this into account and compensate somehow.
 
 
-### Lesson 2: competing on market share is possible; relevance is harder
+### Lesson 2: competing on market share is possible; relevance is much harder
 
-Bing holds somewhere around ~20% of market share. The field is still dominated by Google, but this is no small chunk. We can get this sort of adoption by doing things like tying it to IE. In this sense it is reasonably simple, if expensive, for Bing to compete with Google.
+Bing holds somewhere around ~20% of market share. The field is still dominated by Google, but this is no small chunk. We are in a fortunate position that we have reach through things like IE and Windows. This shows that it's possible to get some amount of traction just by exposing the product to people.
 
-In contrast, consider that we've invested *at least* millions into *just* search relevance &mdash; I'm not even counting infrastructure here. Since there aren't enough relevance engineers to go around, we've been forced to make creative investments in order to get the relevance ratings we have. In this sense, comparing our good results with the money we put in, I'd realistically say we've gotten pretty good mileage out of our team.
+But of course reach is not the whole story. MSN didn't do so hot before it was replaced, and our reach was probably even stronger back then. So at some point relevance becomes important. Unfortunately, candidly this is a much harder problem.
+
+Consider that we've invested *at least* millions into *just* search relevance &mdash; I'm not even counting infrastructure here. Since there aren't enough relevance engineers to go around, we've been forced to make creative investments in order to get the relevance ratings we have. In this sense, comparing our good results with the money we put in, I'd realistically say we've gotten pretty good mileage out of our team.
 
 But the fact remains: the difference in search quality &mdash; perceived or real, it doesn't matter &mdash; is noticeable to some subset of the people who use search regularly. More specifically, as an entrepreneur you have to answer this question: **how would you make these investments differently, and how much money would you need to do it correctly?**
 
