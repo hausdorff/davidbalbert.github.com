@@ -65,6 +65,16 @@ Fortunately, a similar investment problem exists for all large companies, Google
 
 Practically, this means that at a startup, one could have spent more time getting a small but rabidly positive set of users, and built up an engine slowly, rather than simply jumping into feature parity. This is a distinct advantage for the entrepreneur.
 
+### Lesson 6: large companies have much more data than you, and their approach to search is sophisticated
+
+IE can track, and has tracked users behavior even when they're not on Bing. (We got in trouble for this once, hehe.) Google says they don't do that with Chrome, but both of them will try to figure out things like how many times you pressed the back button. They know about a lot of small details, like the fact that it's really important to serve results *fast*.
+
+Some more examples. MSR has published papers that indicate that it's useful to track your behavior [across tabs](http://jeffhuang.com/Final_Branching_WSDM12.pdf) and [based on where you point your mouse](http://jeffhuang.com/Final_CursorModel_SIGIR12.pdf). It's important to recognize that even if Bing doesn't end up using all of MSR's research, the fact that they've spent a lot of money doing the research means that they've tried and discarded a *lot* of things.
+
+It also takes a lot of time and energy to iterate a new search algorithm. You discover some features, you put them in your model, you pilot your model, you use that model to discover more features, and so on. This has a compounding effect that is really hard to make up for if you are behind.
+
+If you're looking to enter the space, be aware that most traditional search problems have really been investigated thoroughly. Someone should either know vaguely what they're doing, or else you should do something different. (Or else, everyone overlooked something really important somehow.)
+
 
 ### Conclusions
 
