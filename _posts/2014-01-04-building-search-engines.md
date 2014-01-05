@@ -26,7 +26,7 @@ Thus, to be a viable threat to Google, you will need to take this into account a
 
 ### Lesson 2: competing on market share is possible; relevance is much harder
 
-Bing holds somewhere around ~20% of market share. The field is still dominated by Google, but this is no small chunk. We are in a fortunate position that we have reach through things like IE and Windows. This shows that it's possible to get some amount of traction just by exposing the product to people.
+Bing holds somewhere around > 20% of market share according to publicly-available sources. The field is still dominated by Google, but this is no small chunk. We are in a fortunate position that we have reach through things like IE and Windows. This shows that it's possible to get some amount of traction just by exposing the product to people.
 
 But of course reach is not the whole story. MSN didn't do so hot before it was replaced, and our reach was probably even stronger back then. So at some point relevance becomes important. Unfortunately, candidly this is a much harder problem.
 
