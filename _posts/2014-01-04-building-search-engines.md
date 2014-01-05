@@ -17,11 +17,11 @@ I work at Microsoft. Competing with Google is hard work. I'm going to point out 
 
 ### Lesson 1: The problem is not only hiring smart people, but hiring *enough* smart people.
 
-The Bing search relevance staff is a fraction the size of Google's. And Google's engineers are amazing. It might be possible to make up for a small difference in size, but competing with a brilliant workforce that is *n times as large as yours* is very hard, especially when n > 3, which in our case, it is.
+The Bing search relevance staff is a fraction the size of Google's. And Google's engineers are amazing. Making up for a small difference in size could be easy; competing with a brilliant workforce that is *n times as large as yours* is very hard, especially when n > 3, which in our case, it is.
 
 What's worse is that the problem is not even that we need to buy such a team. MS is rich enough that it could do that if it wanted to. The problem is *finding enough people* to build such a team. There are a limited number of search relevance engineers available, and many of them work for Google.
 
-Thus, to be a viable threat to Google, you will need to take this into account and compensate somehow.
+This is a constant problem for all who enter the field, and to be a viable threat to Google, you will need to take this into account and compensate somehow. Obviously we have our own strategies for dealing with this problem.
 
 
 ### Lesson 2: competing on market share is possible; relevance is much harder
@@ -48,7 +48,7 @@ But the information people seem to care about the most is locked away in social 
 
 A good example of this is NoSQL datastores. It is generally a huge struggle to stably deploy current OSS NoSQL solutions on a couple hundred, let alone a couple thousand nodes. Facebook gave up on Cassandra, and Twitter stopped trying to migrate after a couple years' effort.
 
-In contrast, Amazon, Google, and MS all have stable deployments on clusters that are *an order of magnitude* larger than the largest known OSS NoSQL store (excepting maybe Riak).
+In contrast, Amazon and Google both have stable deployments on clusters that are *an order of magnitude* larger than the largest known OSS NoSQL store (excepting maybe Riak).
 
 Another problem is that these solutions tend to be developed end-to-end, so that they all fit together, and are designed to work together. This is not usually true of OSS, where you tend to cobble together lots of ill-fitting tools until your system starts limping along.
 
