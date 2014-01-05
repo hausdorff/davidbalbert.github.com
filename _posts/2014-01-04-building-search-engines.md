@@ -67,7 +67,7 @@ Practically, this means that at a startup, one could have spent more time gettin
 
 ### Lesson 6: large companies have much more data than you, and their approach to search is sophisticated
 
-IE can track, and has tracked users behavior even when they're not on Bing. (We got in trouble for this once, hehe.) Google says they don't do that with Chrome, but both of them will try to figure out things like how many times you pressed the back button. They know about a lot of small details, like the fact that it's really important to serve results *fast*.
+IE can track, and has tracked users behavior even when they're not on Bing. (We got in trouble for this once, hehe. Google says they don't do that with Chrome, by the way.) Both Bing and Google will try to figure out things like how many times you pressed the back button, how many of the search results you visited for a particular query, and so on. They know about a lot of small details, like the fact that it's really important to serve results *fast*.
 
 Some more examples. MSR has published papers that indicate that it's useful to track your behavior [across tabs](http://jeffhuang.com/Final_Branching_WSDM12.pdf) and [based on where you point your mouse](http://jeffhuang.com/Final_CursorModel_SIGIR12.pdf). It's important to recognize that even if Bing doesn't end up using all of MSR's research, the fact that they've spent a lot of money doing the research means that they've tried and discarded a *lot* of things.
 
