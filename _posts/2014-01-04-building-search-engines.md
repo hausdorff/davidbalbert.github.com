@@ -26,22 +26,20 @@ This is a constant problem for all who enter the field, and to be a viable threa
 
 ### Lesson 2: competing on market share is possible; relevance is much harder
 
-Bing holds somewhere around > 20% of market share according to publicly-available sources. The field is still dominated by Google, but this is no small chunk. We are in a fortunate position that we have reach through things like IE and Windows. This shows that it's possible to get some amount of traction just by exposing the product to people.
+Bing holds somewhere around > 20% of market share according to publicly-available sources. Google is still the player to beat in the field, but this is no small chunk. It is obvious that some of this market share comes from reach we have through things like IE and Windows, and through public partners like Facebook. This sort of reach isn't free, but it's not nearly as difficult as getting good relevance scores.
 
-But of course reach is not the whole story. MSN didn't do so hot before it was replaced, and our reach was probably even stronger back then. So at some point relevance becomes important. Unfortunately, this is obviously a much harder problem.
+And getting good relevance is hard, make no mistake. Consider that Bing invested *at least* millions into *just* search relevance &mdash; I'm not even counting infrastructure here. Since there aren't enough relevance engineers to go around, and the only alternative is to make creative investments in order to get the reasonably good relevance ratings we have. In this sense, comparing our good results with the money we put in, I'd realistically say we've gotten pretty good mileage out of our team.
 
-Consider that we've invested *at least* millions into *just* search relevance &mdash; I'm not even counting infrastructure here. Since there aren't enough relevance engineers to go around, we've been forced to make creative investments in order to get the relevance ratings we have. In this sense, comparing our good results with the money we put in, I'd realistically say we've gotten pretty good mileage out of our team.
+Still, some dissonance exists here: the difference in search quality &mdash; perceived or real, it doesn't matter &mdash; is noticeable to some subset of the people who use search regularly. More specifically, as an entrepreneur you have to answer this question: **how would you make these investments differently, and how much money would you need to do it correctly?**
 
-But the fact remains: the difference in search quality &mdash; perceived or real, it doesn't matter &mdash; is noticeable to some subset of the people who use search regularly. More specifically, as an entrepreneur you have to answer this question: **how would you make these investments differently, and how much money would you need to do it correctly?**
-
-Honestly, I don't know if it could have been done substantially better. Try coming up with an answer, it's actually very hard. So far I don't think anyone has succeeded. Ultimately I think this will be a very hard gap to bridge directly, and entrepreneurs should plan accordingly.
+Honestly, I don't know if it could have been done substantially better. Try coming up with an answer and you'll see it's actually very hard. So far I don't think anyone has succeeded, and ultimately I think this will be a very hard gap to bridge directly. Entrepreneurs should plan accordingly.
 
 
 ### Lesson 3: social may pose an existential threat to Google's style of search
 
 Google, like all search companies, is entasked with providing an easy way to access information that's important to people.
 
-But the information people seem to care about the most is locked away in social sites like Facebook. This is inaccessible to Google. Since they rolled out G+, they must think this is a credible threat, so they will probably keep an eye on you if you approach from this angle.
+But the information people seem to care about the most is locked away in social sites like Facebook, or at least is only derivable from information that is locked in those websites. This is inaccessible to Google. Since they rolled out G+, they must think this is a credible threat, so they will probably keep an eye on you if you approach from this angle.
 
 
 ### Lesson 4: large companies have access to technology that is often categorically better than OSS state of the art
@@ -73,7 +71,7 @@ Practically, this means that at a startup, one could have spent more time gettin
 
 ### Lesson 6: large companies have much more data than you, and their approach to search is sophisticated
 
-IE can track, and has tracked users behavior even when they're not on Bing. (We got in trouble for this once, hehe. Google says they don't do that with Chrome, by the way.) Both Bing and Google will try to figure out things like how many times you pressed the back button, how many of the search results you visited for a particular query, and so on. They know about a lot of small details, like the fact that it's really important to serve results *fast*. (There's a talk by Marissa Meyer about this somewhere, but I forget where.)
+IE can track, and has tracked users behavior even when they're not on Bing. (We got in trouble for this once. Google says they don't do that with Chrome, by the way.) Both Bing and Google will try to figure out things like how many times you pressed the back button, how many of the search results you visited for a particular query before you found what you wanted, and so on. They know about a lot of small details, like the fact that it's really important to serve results *fast*. (There's a talk by Marissa Meyer about this somewhere, but I forget where.)
 
 Some more examples. MSR has published papers that indicate that it's useful to track your behavior [across tabs](http://jeffhuang.com/Final_Branching_WSDM12.pdf) and [based on where you point your mouse](http://jeffhuang.com/Final_CursorModel_SIGIR12.pdf). It's important to recognize that even if Bing doesn't end up using all of MSR's research, the fact that they've spent a lot of money doing the research means that they've tried and discarded a *lot* of things.
 
