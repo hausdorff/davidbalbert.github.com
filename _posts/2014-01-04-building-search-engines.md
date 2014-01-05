@@ -35,7 +35,7 @@ Try coming up with an answer, it's actually very hard. So far I don't think anyo
 
 ### Lesson 3: social may pose an existential threat to Google's style of search
 
-Google, like all search companies, is entasked with providing an easy way to access information that's important to them.
+Google, like all search companies, is entasked with providing an easy way to access information that's important to people.
 
 But the information people seem to care about the most is locked away in social sites like Facebook. This is inaccessible to Google. Since they rolled out G+, they must think this is a credible threat, so they will probably keep an eye on you if you approach from this angle.
 
