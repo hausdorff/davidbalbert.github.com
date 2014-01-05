@@ -57,13 +57,11 @@ This should give you a sense of the scale at which these companies operate. Entr
 
 People use computers primarily to access the Internet. MS is now a devices and services company, hence its main job is to provide the Internet to people as a service.
 
-If MS wants to maintain its position as a field leader, it can't just be the OS and the browser used to access the Internet &mdash; it must be a substantive part of the service itself, which means that it needs to be the page peopl land on when they open their browser.
+If MS wants to maintain its position as a field leader, it can't just be the OS and the browser used to access the Internet &mdash; it must be a substantive part of the service itself, which means that it needs to be the page people land on when they open their browser.
 
-And that is what Bing is. For this reason, it is more important that Bing (for the moment) that Bing exists than it is that it is equal to or better than Google in every way.
+And that is what Bing is. For this reason, it is more important (for the moment) that Bing exists than it is that it is equal to or better than Google in every way. Of course, it is a huge priority to make Bing better, but this is not the only consideration MS must make.
 
-Of course, it is a huge priority to make Bing better, but this is not the only consideration MS must make.
-
-Of course, a similar investment strategy exists for all large companies, Google included with it's G+. This is an advantage for entrepreneurs, and you would be wise to use it.
+Fortunately, a similar investment problem exists for all large companies, Google included with it's G+. This is an advantage for entrepreneurs, and you would be wise to use it.
 
 Practically, this means that at a startup, one could have spent more time getting a small but rabidly positive set of users, and built up an engine slowly, rather than simply jumping into feature parity. This is a distinct advantage for the entrepreneur.
 
