@@ -55,7 +55,7 @@ This should give you a sense of the scale at which these companies operate. Entr
 
 ### Lesson 5: large companies are necessarily limited by their previous investments
 
-People use computers primarily to access the Internet. MS is now a devices and services company, hence its main job is to provide the Internet to people as a service.
+People use computers primarily to access the Internet. MS is now a devices and services company, hence its main job is to provide the Internet to people as a service on MS devices.
 
 If MS wants to maintain its position as a field leader, it can't just be the OS and the browser used to access the Internet &mdash; it must be a substantive part of the service itself, which means that it needs to be the page people land on when they open their browser.
 
