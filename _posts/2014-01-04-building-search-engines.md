@@ -30,7 +30,7 @@ Bing holds somewhere around ~20% of market share. The field is still dominated b
 
 In contrast, consider that we've invested *at least* millions into *just* search relevance &mdash; I'm not even counting infrastructure here. Since there aren't enough relevance engineers to go around, we've been forced to make creative investments in order to get the relevance ratings we have.
 
-In this sense, we've gotten pretty good mileage out of our team, but the fact remains: the difference in search quality &mdash; perceived or real, it doesn't matter &mdash; is noticeable to a large subset of the people who use search regularly. More specifically, as an entrepreneur you have to answer this question: **how would you make these investments differently, and how much money would you need to do it correctly?**
+In this sense, we've gotten pretty good mileage out of our team, but the fact remains: the difference in search quality &mdash; perceived or real, it doesn't matter &mdash; is noticeable to some subset of the people who use search regularly. More specifically, as an entrepreneur you have to answer this question: **how would you make these investments differently, and how much money would you need to do it correctly?** Because honestly, I don't know if it could have been done substantially better.
 
 Try coming up with an answer, it's actually very hard. So far I don't think anyone has succeeded. Ultimately I think this will be a very hard gap to bridge directly, and entrepreneurs should plan accordingly.
 
