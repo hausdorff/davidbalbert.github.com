@@ -6,7 +6,7 @@ permalink: building-search-engines.html
 analysis: ■
 ---
 
-Hacker News is up in arms again today about the RapGenius fiasco. See [RapGenius statement](http://news.rapgenius.com/Rap-genius-founders-rap-genius-is-back-on-google-lyrics) and [HN comments](https://news.ycombinator.com/item?id=7010997). One response article argues that we need [more search engine competition](http://peebs.org/2014/01/04/we-need-viable-search-engine-competition-now/) and the HN community largely seems to [agree](https://news.ycombinator.com/item?id=7011472).
+Hacker News is up in arms again today about the RapGenius fiasco. See [RapGenius statement](http://news.rapgenius.com/Rap-genius-founders-rap-genius-is-back-on-google-lyrics) and [HN comments](https://news.ycombinator.com/item?id=7010997). One response article argues that we need [more "viable search engine competition"](http://peebs.org/2014/01/04/we-need-viable-search-engine-competition-now/) and the HN community largely seems to [agree](https://news.ycombinator.com/item?id=7011472).
 
 In this response article, and in much of the discussion, there is a picaresque notion that the "search engine problem" is really just a product problem, and that if we try really hard to think of good features, we can defeat the giant.
 
