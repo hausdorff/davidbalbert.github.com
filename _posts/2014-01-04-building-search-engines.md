@@ -15,7 +15,7 @@ I work at Microsoft. Competing with Google is hard work. I'm going to point out 
 
 ### Lesson 1: The problem is not only hiring smart people, but hiring *enough* smart people.
 
-The Bing search relevance staff is probably ~20% the size of Google's. And Google's engineers are amazing. It might be possible to make up for a small difference in size, but competing with a brilliant workforce that is *5 times as large as yours* is very hard.
+The Bing search relevance staff is probably ~20% the size of Google's (or something like that &mdash; I forget). And Google's engineers are amazing. It might be possible to make up for a small difference in size, but competing with a brilliant workforce that is *5 times as large as yours* is very hard.
 
 What's worse is that the problem is not even that we need to buy such a team. MS is rich enough that it could do that if it wanted to. The problem is *finding enough people* to build such a team. There are a limited number of search relevance engineers available, and many of them work for Google.
 
