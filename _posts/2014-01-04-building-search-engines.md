@@ -12,6 +12,8 @@ In much of the discussion, there is a picaresque notion that the "search engine 
 
 I work at Microsoft. Competing with Google is hard work. I'm going to point out some of the lessons I've learned along the way, to help all you spry young entrepreneurs who might want to enter the market.
 
+(*This should go without saying, but in no way was this edited or approved by my employer. Conclusions are drawn purely from public knowledge.*)
+
 
 ### Lesson 1: The problem is not only hiring smart people, but hiring *enough* smart people.
 
