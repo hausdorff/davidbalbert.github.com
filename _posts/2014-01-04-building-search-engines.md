@@ -28,7 +28,7 @@ Thus, to be a viable threat to Google, you will need to take this into account a
 
 Bing holds somewhere around > 20% of market share according to publicly-available sources. The field is still dominated by Google, but this is no small chunk. We are in a fortunate position that we have reach through things like IE and Windows. This shows that it's possible to get some amount of traction just by exposing the product to people.
 
-But of course reach is not the whole story. MSN didn't do so hot before it was replaced, and our reach was probably even stronger back then. So at some point relevance becomes important. Unfortunately, candidly this is a much harder problem.
+But of course reach is not the whole story. MSN didn't do so hot before it was replaced, and our reach was probably even stronger back then. So at some point relevance becomes important. Unfortunately, this is obviously a much harder problem.
 
 Consider that we've invested *at least* millions into *just* search relevance &mdash; I'm not even counting infrastructure here. Since there aren't enough relevance engineers to go around, we've been forced to make creative investments in order to get the relevance ratings we have. In this sense, comparing our good results with the money we put in, I'd realistically say we've gotten pretty good mileage out of our team.
 
