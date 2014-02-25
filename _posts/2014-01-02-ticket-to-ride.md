@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ticket to ride&#58 reflecting on the value of my CS degree
+title: "Ticket to ride: reflecting on the value of my CS degree"
 comments: true
 permalink: ticket-to-ride.html
 analysis: ■
