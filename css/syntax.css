@@ -4,7 +4,7 @@
 .highlight .k { color: #0000ff; font-weight: bold } /* Keyword */
 .highlight .n { color: #008800; font-weight: bold } /* var name */
 .highlight .p { color: #000; font-weight: bold } /* punctuation */
-.highlight .o { font-weight: bold } /* Operator */
+.highlight .o { color: #777; font-weight: bold } /* Operator */
 .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #777; font-weight: bold } /* Comment.Preproc */
 .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
