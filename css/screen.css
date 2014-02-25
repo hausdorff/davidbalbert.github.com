@@ -228,6 +228,13 @@ ul.posts {
   text-align: center;
 }
 
+.site .journal {
+  color: #000000;
+  display:inline-block;
+  width: 1em;
+  text-align: center;
+}
+
 /*****************************************************************************/
 /*
 /* Posts
