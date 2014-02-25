@@ -235,6 +235,13 @@ ul.posts {
   text-align: center;
 }
 
+.site .postTitle {
+  display:inline-block;
+  width: 500px;
+  vertical-align:middle;
+  border-bottom:thin dotted #cacaca;
+}
+
 /*****************************************************************************/
 /*
 /* Posts
