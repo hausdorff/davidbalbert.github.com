@@ -57,7 +57,7 @@ The gist of this section is that OpenSSL uses [ASN.1](http://en.wikipedia.org/wi
 
 If you're not interested in the plumbing of this, you can skip this section. Otherwise a more detailed description follows.
 
-ASN.1 items are sent to the `ASN1_item_ex_d2i` function, which is located on line 154 of [my patched version](https://github.com/hausdorff/openssl-with-secure-malloc/blob/033f156040d1ff175591c924c2a0c1a0d75ad356/crypto/asn1/tasn_dec.c) of `crypto/asn1/tasn_dec.c`:
+ASN.1 items are sent to the `ASN1_item_ex_d2i` function, which is located on [line 154](https://github.com/hausdorff/openssl-with-secure-malloc/blob/master/crypto/asn1/tasn_dec.c#L154) of my patched version of `crypto/asn1/tasn_dec.c`:
 
 ```c
  /* Decode an item, taking care of IMPLICIT tagging, if any.
@@ -73,7 +73,7 @@ This means that any time we receive an RSA private key, it must come through thi
 
 Salz alters this code to intercept any ASN.1 item that encodes an RSA private key, and simply allocates it on the secure heap with `secure_malloc` (*et al*) instead of with `malloc` and friends.
 
-On line 172 of the `ASN1_item_ex_d2i` function, Salz adds the following local variables, which we will use to track whether the current ASN.1 item contains an RSA private key (rather than, say, and RSA *public* key).
+On [line 173](https://github.com/hausdorff/openssl-with-secure-malloc/blob/master/crypto/asn1/tasn_dec.c#L173) of the `ASN1_item_ex_d2i` function, Salz adds the following local variables, which we will use to track whether the current ASN.1 item contains an RSA private key (rather than, say, and RSA *public* key).
 
 ```c
   	int ret = 0;
@@ -89,7 +89,7 @@ On line 172 of the `ASN1_item_ex_d2i` function, Salz adds the following local va
 
 ```
 
-Then, beginning on line 415 (this is still in the function `ASN1_item_ex_d2i`) Salz adds code to check if the ASN.1 item has `sname` starting with the characters `'R'`, `'S'`, and `'A'`. If this is true, this item encodes either an RSA private key, or an RSA public key. So we set `ak_is_rsa_key = 1`:
+Then, beginning on [line 417](https://github.com/hausdorff/openssl-with-secure-malloc/blob/master/crypto/asn1/tasn_dec.c#L417) (this is still in the function `ASN1_item_ex_d2i`) Salz adds code to check if the ASN.1 item has `sname` starting with the characters `'R'`, `'S'`, and `'A'`. If this is true, this item encodes either an RSA private key, or an RSA public key. So we set `ak_is_rsa_key = 1`:
 
 ```c
 
@@ -106,7 +106,7 @@ Then, beginning on line 415 (this is still in the function `ASN1_item_ex_d2i`) S
 
 ```
 
-Finally, starting on line 458, Salz adds code to check whether the ASN.1 template field name starts with any of the following characters: `'d'`, `'p'`, or `'q'`. If so, **this item is our private key**, and it must be allocated on the secure heap.
+Finally, starting on [line 469](https://github.com/hausdorff/openssl-with-secure-malloc/blob/master/crypto/asn1/tasn_dec.c#L469), Salz adds code to check whether the ASN.1 template field name starts with any of the following characters: `'d'`, `'p'`, or `'q'`. If so, **this item is our private key**, and it must be allocated on the secure heap.
 
 * So we set `ak_is_secure_field = 1`, indicating this field needs to be allocatedon the secure heap, and
 * call `start_secure_allocation`, which will initialize the secure heap if it hasn't been initialized already.
