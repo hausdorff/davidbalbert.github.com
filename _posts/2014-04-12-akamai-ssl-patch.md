@@ -173,7 +173,22 @@ int asn1_enc_save(ASN1_VALUE **pval, const unsigned char *in, int inlen,
 
 ```
 
-As we will see, internally our `secure_malloc` will allow us to allocate to the secure heap if and only if the secure heap is initialized; if not, it defaults to normal `malloc`.
+Internally our `secure_malloc` will allow us to allocate to the secure heap if and only if the secure heap is initialized; if not, it defaults to normal `malloc`. See below, the switch between `malloc` and `cmm_malloc` (which we haven't seen yet):
+
+```c
+void *secure_malloc(size_t size)
+{
+  void *ret;
+
+  if (!secure_allocation_enabled())
+    return malloc(size);
+  LOCK();
+  ret = cmm_malloc(size);
+  UNLOCK();
+  return ret;
+}
+
+```
 
 This allows us to make the same call and simply change how we allocate based on whether the secure heap is enabled.
 
