@@ -157,7 +157,7 @@ This means that, later in the function `ASN1_item_ex_d2i`, when it is time to sa
   			goto auxerr;
 ```
 
-Internally, this will call `OPENSSL_malloc`, but instead of calling the normal `malloc`, we will now call `secure_malloc`, since `OPENSSL_malloc` now points at `secure_malloc`:
+Internally, this will call `OPENSSL_malloc`, but instead of calling the normal `malloc`, we will now call `secure_malloc`, since `OPENSSL_malloc` now points at `secure_malloc`. See the function for yourself:
 
 ```c
 int asn1_enc_save(ASN1_VALUE **pval, const unsigned char *in, int inlen,
