@@ -278,7 +278,7 @@ The next two lines are calls to `mprotect`. They are essentially ensuring that t
 We return `cmm_arena` in the last line.
 
 
-## Conclusions
+## Wrapping up
 
 The end result of the initialization phase is more or less what Salz promised. The secure heap is pinned to memory, and the guard pages cause segfaults if you accidentally access them.
 
