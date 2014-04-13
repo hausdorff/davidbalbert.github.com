@@ -69,11 +69,9 @@ ASN.1 items are sent to the `ASN1_item_ex_d2i` function, which is located on [li
   			int tag, int aclass, char opt, ASN1_TLC *ctx);
 ```
 
-This means that any time we receive an RSA private key, it must come through this function, encoded as an ASN.1 object.
+This means that any time we receive an RSA private key, it must come through this function, encoded as an ASN.1 object. Now our task is to simply find all the ASN.1 items that encode RSA private keys, and allocated them on the secure heap instead of the normal heap.
 
-Salz alters this code to intercept any ASN.1 item that encodes an RSA private key, and simply allocates it on the secure heap with `secure_malloc` (*et al*) instead of with `malloc` and friends.
-
-On [line 173](https://github.com/hausdorff/openssl-with-secure-malloc/blob/master/crypto/asn1/tasn_dec.c#L173) of the `ASN1_item_ex_d2i` function, Salz adds the following local variables, which we will use to track whether the current ASN.1 item contains an RSA private key (rather than, say, and RSA *public* key).
+To begin, on [line 173](https://github.com/hausdorff/openssl-with-secure-malloc/blob/master/crypto/asn1/tasn_dec.c#L173) of the `ASN1_item_ex_d2i` function, Salz adds the following local variables, which we will use to track whether the current ASN.1 item contains an RSA private key (rather than, say, and RSA *public* key).
 
 ```c
   	int ret = 0;
@@ -151,7 +149,7 @@ No! In fact, in `crypto/crypto.h`, we see that Salz changes OpenSSL's core `mall
 
 (NOTE: of course Salz this also redefines all the other family members like `OPENSSL_free` and `OPENSSL_realloc`, not just `malloc`. We've just chosen to omit them here.)
 
-This means that, later in the function `ASN1_item_ex_d2i`, when it is time to save this ASN.1-encoded item, we will call `asn1_enc_save` (which is in `crypto/asn1/tasn_utl.c`):
+This means that, later in the function `ASN1_item_ex_d2i`, when it is time to save this ASN.1-encoded item, we will call `asn1_enc_save` (which, by the way, is in `crypto/asn1/tasn_utl.c`):
 
 ```c
  		/* Save encoding */
@@ -159,7 +157,7 @@ This means that, later in the function `ASN1_item_ex_d2i`, when it is time to sa
   			goto auxerr;
 ```
 
-Internally, this will call `OPENSSL_malloc`, but instead of calling the normal `malloc`, we will now call `secure_malloc`:
+Internally, this will call `OPENSSL_malloc`, but instead of calling the normal `malloc`, we will now call `secure_malloc`, since `OPENSSL_malloc` now points at `secure_malloc`:
 
 ```c
 int asn1_enc_save(ASN1_VALUE **pval, const unsigned char *in, int inlen,
@@ -175,16 +173,18 @@ int asn1_enc_save(ASN1_VALUE **pval, const unsigned char *in, int inlen,
 
 ```
 
-Internally, `secure_malloc`, as we will see, will allow us to allocate to the secure heap if and only if the secure heap is initialized; if not, it defaults to normal `malloc`.
+As we will see, internally our `secure_malloc` will allow us to allocate to the secure heap if and only if the secure heap is initialized; if not, it defaults to normal `malloc`.
 
 This allows us to make the same call and simply change how we allocate based on whether the secure heap is enabled.
 
 
 ## The secure malloc
 
-The magic of `secure_malloc` isn't actually in the `malloc` function itself. Like most `malloc`s, `secure_malloc` basically traverses free lists, and peels off some memory to service the request, or returns `NULL` if allocation failed.
+It turns out that the magic of `secure_malloc` isn't actually in the `malloc` function itself. Like most `malloc`s, `secure_malloc` basically traverses free lists, and peels off some memory to service the request, or returns `NULL` if allocation failed.
 
-The initialization code, on the other hand, is interesting. Initialization begins with a call to `secure_malloc_init` (in `crypto/buddy_allocator.c`). It takes as arguments `size`, the size in bytes we're to give the secure heap, `mem_min_unit`, which I think is the minimum number of bytes to give an object allocatedin the secure heap, and `overrun_bytes`, which I don't understand.
+The initialization code, on the other hand, is interesting.
+
+We begin with a call to `secure_malloc_init` (in `crypto/buddy_allocator.c`). It takes as arguments `size`, the size in bytes we're to give the secure heap, `mem_min_unit`, which I think is the minimum number of bytes to give an object allocatedin the secure heap, and `overrun_bytes`, which I frankly didn't bother to understand.
 
 ```c
 /* Module initialization, returns >0 upon success */
@@ -221,8 +221,8 @@ The interesting part of this function is the central `if`-`else` chain in the mi
 Put succinctly:
 
 * The `if (arena)` block checks to see if the secure heap (or "`arena`") is already built. If it is, we'll return the local variable `ret` which at this point is `0`, indicating that we failed to initialize the secure heap.
-* The next block, `else if ((arena = (char *)[...]`, will build the secure heap. We'll see how this works closer in a second.
-* The next block, `else if (mlock(arena, arena_size))`, block will lock the secure heap into memory, so that it never goes to disk.
+* The next block, `else if ((arena = (char *)[...]`, will build the secure heap. We'll see how this works in a second.
+* The next block, `else if (mlock(arena, arena_size))`, will lock the secure heap into memory, so that it never goes to disk.
 * The next block, `else if (pthread_key_create([...]` will create a thread-specific data "key" we will use to check things like whether secure allocation is enabled.
 * The final block, `else`, will set `secure_allocation_block = 1` and set `ret = 1`. When this function returns, it will return `ret`, which if we make it this far, will be larger than 0, which indicates success.
 
@@ -268,3 +268,5 @@ We return `cmm_arena` in the last line.
 The end result of the initialization phase is more or less what Salz promised. The secure heap is pinned to memory, and the guard pages cause segfaults if you accidentally access them.
 
 If you're interested to see how the rest of the system works, the `malloc`, `realloc`, `free`, *etc*. are all worth a read, but they're not especially crazy as `malloc` implementations go.
+
+One interesting thing to note: I couldn't find anywhere that `secure_malloc_init` was actually called in the code. This means that it's never actually being initialized, and therefore never being used. Or I'm missing something.
