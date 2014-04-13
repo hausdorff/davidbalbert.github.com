@@ -195,7 +195,7 @@ This allows us to make the same call and simply change how we allocate based on 
 
 ## The secure malloc
 
-It turns out that the magic of `secure_malloc` isn't actually in the `malloc` function itself. Like most `malloc`s, `secure_malloc` basically traverses free lists, and peels off some memory to service the request, or returns `NULL` if allocation failed.
+This section is a bit of a misnomer, because it turns out that the magic of `secure_malloc` isn't actually in the `malloc` function itself. Like most `malloc`s, `secure_malloc` basically traverses free lists, and peels off some memory to service the request, or returns `NULL` if allocation failed.
 
 The initialization code, on the other hand, is interesting.
 
