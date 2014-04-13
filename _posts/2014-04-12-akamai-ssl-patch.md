@@ -11,7 +11,7 @@ For more than a decade, Akamai has guarded their users' private RSA keys using a
 
 Yesterday, [Rich Salz](http://en.wikipedia.org/wiki/Rich_Salz) disseminated a patch to `openssl-users` that adds a variation of this `malloc` family to OpenSSL. An archived version of Salz's email is [here](http://www.mail-archive.com/openssl-users@openssl.org/msg73503.html). The effect is that in the forseeable future, it should be possible for OpenSSL to store RSA private keys on a the so-called "secure" heap.
 
-Now, **I know literally nothing about security or systems programming**, but I found this fascinating, and couldn't help but crack it open to see how it worked. In the rest of this post we'll explore in detail how it works.
+Now, **I know literally nothing about security or systems programming**, but I found this fascinating, and couldn't help but crack it open to see how it worked. In the rest of this post we'll explore the implementation in detail.
 
 
 ## What you'll need
@@ -23,14 +23,14 @@ I've gone ahead and forked OpenSSL v1.0.1g, integrated Salz's patch, and [put it
 
 Salz describes the patch as adding a "secure arena":
 
-* The arena is an `mmap`'d slice of memory with guard pages allocated before and after. These guard pages are marked `PROT_NONE`, which means that accessing them causes a segmentation fault. This prevents stray pointers from wandering into the secure arena, and it makes failed attempts to access the memory obvious.
-* The arena is resident to memory, and won't appear on disk.
-* Specifically handles allocation of RSA private keys, and nothing else.
+* The arena is an `mmap`'d slice of memory with guard pages allocated before and after. These guard pages are marked `PROT_NONE`, which means that accessing them causes a segmentation fault. This results means that **a wandering pointer will segfault when it accesses memory in this page**, making it easier to protect things in this "secure" heap.
+* The arena is resident to memory, and **won't appear on disk.**
+* Specifically handles allocation of RSA private keys, and **nothing else.**
 
 
 ## The patch
 
-A nice, highlighted GitHub diff of Salz's patch is in my repository [here](https://github.com/hausdorff/openssl-with-secure-malloc/commit/033f156040d1ff175591c924c2a0c1a0d75ad356). Note that the part that protects the guard pages with `PROT_NONE` actually appears [later in my commit history](https://github.com/hausdorff/openssl-with-secure-malloc/commit/ba8c04147b007b55d9ecab50eb3e2061326fa4fe).
+A nice highlighted GitHub diff of Salz's original patch is in my repository [here](https://github.com/hausdorff/openssl-with-secure-malloc/commit/033f156040d1ff175591c924c2a0c1a0d75ad356). Note that the part that protects the guard pages with `PROT_NONE` actually appears [later in my commit history](https://github.com/hausdorff/openssl-with-secure-malloc/commit/ba8c04147b007b55d9ecab50eb3e2061326fa4fe).
 
 There are two interesting parts of this patch:
 
