@@ -24,7 +24,7 @@ I've gone ahead and forked OpenSSL v1.0.1g, integrated Salz's patch, and [put it
 Salz describes the patch as adding a "secure arena":
 
 * The arena is an `mmap`'d slice of memory with guard pages allocated before and after. These guard pages are marked `PROT_NONE`, which means that accessing them causes a segmentation fault. This results means that **a wandering pointer will segfault when it accesses memory in this page**, making it easier to protect things in this "secure" heap.
-* The arena is resident to memory, and **won't appear on disk.**
+* The arena is pinned to memory, and **won't appear on disk.**
 * Specifically handles allocation of RSA private keys, and **nothing else.**
 
 
