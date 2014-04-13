@@ -199,7 +199,7 @@ This section is a bit of a misnomer, because it turns out that the magic of `sec
 
 The initialization code, on the other hand, is interesting.
 
-We begin with a call to `secure_malloc_init` (in `crypto/buddy_allocator.c`). It takes as arguments `size`, the size in bytes we're to give the secure heap, `mem_min_unit`, which I think is the minimum number of bytes to give an object allocatedin the secure heap, and `overrun_bytes`, which I frankly didn't bother to understand.
+We begin with a call to `secure_malloc_init` (in `crypto/buddy_allocator.c`). It takes as arguments `size`, the size in bytes we're to give the secure heap, `mem_min_unit`, which I think is the minimum number of bytes to give an object allocated in the secure heap, and `overrun_bytes`, which I frankly didn't bother to understand.
 
 ```c
 /* Module initialization, returns >0 upon success */
