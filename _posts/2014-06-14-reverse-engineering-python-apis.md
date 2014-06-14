@@ -3,7 +3,7 @@ layout: post
 title: "Reverse engineering a Python API"
 permalink: reverse-engineering-python-apis.html
 comments: true
-analysis: ■
+technique: ■
 ---
 
 
