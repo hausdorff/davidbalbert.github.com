@@ -15,7 +15,7 @@ I guess that means I have [*three* problems](http://regex.info/blog/2006-09-15/2
 
 Looks like I have to go in through the back door.
 
-[Ed. note: Allison Kaptur, everyone's favorite Python nerd, [writes in](https://twitter.com/akaptur/status/477805916382035968) to tell us there was a much easier way. Ok, well, in my defense I don't know what the hell I'm doing.]
+[Ed. note: Allison Kaptur, everyone's favorite Python nerd, [writes in to tell us that we didn't have to go through the back door, because the front door was in fact open](https://twitter.com/akaptur/status/477805916382035968). Ok, well, in my defense I don't know what the hell I'm doing.]
 
 
 ## What is the name of the method, again?
