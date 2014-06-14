@@ -86,7 +86,7 @@ WHOA! Look at those last few members! `re.findall.func_code`? `re.findall.func_d
     Empty matches are included in the result.
 ```
 
-It doesn't! Damn. But, it tells us a bit about the method. So, not completely useless.
+It doesn't! Damn. **And let that be a lesson to you. Document your parameters when you document your method.** Still, it does tell us a bit about the method. So, not completely useless.
 
 What about `re.findall.func_code`?
 
