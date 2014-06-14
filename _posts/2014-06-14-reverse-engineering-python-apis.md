@@ -29,7 +29,9 @@ What methods are inside the module?
 
 I honestly forget.
 
-I remember I can call `dir(re)` to get "approximately" all the members of the `re` module. I think `dir` is a method &mdash; it might be a metaclass or something, though. No Internet, remember?
+I remember I can call `dir(re)` to get "approximately" all the members of the `re` module.
+
+(I think `dir` is a method &mdash; it might be a metaclass or something, though. No Internet, remember?)
 
 Anyway, calling it results in:
 
