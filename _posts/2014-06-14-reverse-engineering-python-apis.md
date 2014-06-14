@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reverse engineering a Python API"
+title: "I needed to use a regex on an airplane without Internet. So I reverse engineered the API."
 permalink: reverse-engineering-python-apis.html
 comments: true
 technique: ■
