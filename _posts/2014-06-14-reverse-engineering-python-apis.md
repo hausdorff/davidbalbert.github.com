@@ -95,7 +95,7 @@ What about `re.findall.func_code`?
 <code object findall at 0x105b36730, file "/Users/alex/PYTHON_STD/lib/python2.7/re.py", line 169>
 ```
 
-What do we do with a "code object"? [ed. note: You might say, "the code object clearly lists a source file, it's on your machine." But it was 4 in the morning, and I ended up doing this later in the process, so hush up.)
+What do we do with a "code object"? [ed. note: You might say, "the code object clearly lists a source file, it's on your machine." But it was 4 in the morning, and my brain wasn't quite ready to think about this sanely yet.]
 
 `dir` to the rescue, yet again:
 
