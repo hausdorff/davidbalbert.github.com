@@ -33,7 +33,7 @@ $ grep --binary-files=text --context=x 'stringfromyourfile' \
     /dev/whateverPartition > someFile.txt
 ```
 
-The gist of what we're doing here is running grep over the partition `/dev/whateverPartition`, finding the string `'stringfromyourfile'`, and grabbing the `x` lines bookending that string. If you pick `x` to be big enough, you should get the entire file, plus a bit of junk around the edges. [EDIT: HN user [sparkie points out](https://news.ycombinator.com/item?id=7944515), this is actually not entirely accurate!] Though, of course, the string has to be unique on your disk, or this will fail.
+The gist of what we're doing here is running grep over the partition `/dev/whateverPartition`, finding the string `'stringfromyourfile'`, and grabbing the `x` lines bookending that string. If you pick `x` to be big enough, you should get the entire file, plus a bit of junk around the edges. [EDIT: [HN user sparkie points out](https://news.ycombinator.com/item?id=7944515) that this is actually not entirely accurate!] Though, of course, the string has to be unique on your disk, or this will fail.
 
 The key to this is actually the flag `--binary-files=text`; that tells grep to run on the binary disk data even though it doesn't really make any sense.
 
