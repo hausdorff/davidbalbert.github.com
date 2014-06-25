@@ -24,7 +24,9 @@ I knew that `grep` works on a lot of the virtual filesystems available in *nix, 
 
 I figured I could use a command like this to grep over raw disk data &mdash; not over files or anything like that, just on the raw data on disk &mdash; and if successful, I'd have a resonable shot at recovering my homework.
 
-After RTFM'ing for awhile, eventually I ran a command that looked vaguely like this:
+I now doubt that this idea is even remotely original &mdash; `grep` was probably designed to do exactly this sort of thing.
+
+Anyway, after RTFM'ing for awhile, eventually I ran a command that looked vaguely like this:
 
 ```
 $ grep --binary-files=text --context=x 'stringfromyourfile' \
