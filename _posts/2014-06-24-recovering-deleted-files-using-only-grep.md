@@ -11,7 +11,7 @@ In my college systems class we were required to implement `malloc`.
 
 I spent a week or so on it. No version control &mdash; I was both youthful and arrogant.
 
-After ironing out all the little systems bugs, I began cleaning up the directory to package up and send off for grading. I went to remove something in the directory that started with the letter m, and when I hit tab, zsh helpfully completed this to `malloc.c`.
+After ironing out all the little systems bugs, I began cleaning up the directory to package up and send off for grading. I went to remove something in the same directory that also started with the letter m, and when I hit tab, zsh helpfully completed this to `malloc.c`.
 
 By the time I had noticed, it was too late.
 
