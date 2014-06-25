@@ -35,4 +35,4 @@ The gist of what we're doing here is running grep over the partition `/dev/whate
 
 The key to this is actually the flag `--binary-files=text`; that tells grep to run on the binary disk data even though it doesn't really make any sense.
 
-In the end, this proved good enough and I got my homework back. It's a nifty hack that I don't expect to need to use again, though it's worth knowing that in principle it can be done, especially if you need to look for something else in a binary file.
+In the end, this proved good enough and I got my homework back. It's a nifty hack that I don't expect to need to use again, though it's worth knowing that in principle it can be done, especially if you need to look for something else in some binary file, somewhere.
