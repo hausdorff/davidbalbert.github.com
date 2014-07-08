@@ -13,19 +13,6 @@ Unfortunately, most of the discussion around machine learning is about the forme
 
 So: while I'm certainly not the best person to be writing this, it seems no one else is stepping up to the plate, so I'm going to do it anyway. Failure is cheap, and all that.
 
-**Here are the questions:**
-
-1. <a href="#what-is-ml">What is machine learning?</a>
-2. <a href="#what-is-model">What is this "model" thing that machine learning people are always talking about?</a>
-3. <a href="#what-is-inference">What is statistical inference?</a>
-4. <a href="#what-is-statistics">Wait, why is machine learning not just statistics?</a>
-5. <a href="#why-ml">Why should I use machine learning?</a>
-6. <a href="#when-ml">When should I use machine learning?</a>
-7. <a href="#why-not-ml">When should I not use machine learning?</a>
-8. <a href="#academic-ml">How are the academic and industrial machine learning communities different?</a>
-9. <a href="#not-in-papers">What do I need to look out for that's not really covered in papers?</a>
-10. <a href="#conclusions">"Conclusions"</a>
-
 
 <a id="what-is-ml"></a>
 What is machine learning?
