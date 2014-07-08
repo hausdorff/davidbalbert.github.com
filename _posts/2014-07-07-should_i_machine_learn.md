@@ -13,7 +13,21 @@ Unfortunately, most of the discussion around machine learning is about the forme
 
 So: while I'm certainly not the best person to be writing this, it seems no one else is stepping up to the plate, so I'm going to do it anyway. Failure is cheap, and all that.
 
+**Here are the questions:**
 
+1. <a href="#what-is-ml">What is machine learning?</a>
+2. <a href="#what-is-model">What is this "model" thing that machine learning people are always talking about?</a>
+3. <a href="#what-is-inference">What is statistical inference?</a>
+4. <a href="#what-is-statistics">Wait, why is machine learning not just statistics?</a>
+5. <a href="#why-ml">Why should I use machine learning?</a>
+6. <a href="#when-ml">When should I use machine learning?</a>
+7. <a href="#why-not-ml">When should I not use machine learning?</a>
+8. <a href="#academic-ml">How are the academic and industrial machine learning communities different?</a>
+9. <a href="#not-in-papers">What do I need to look out for that's not really covered in papers?</a>
+10. <a href="#conclusions">"Conclusions"</a>
+
+
+<a id="what-is-ml"></a>
 What is machine learning?
 ----------
 
@@ -22,9 +36,11 @@ Machine learning is a loose confederation of problems whose only commonality is 
 * **Classification.** *e.g.*, is this a picture of a cat or a gorilla?
 * **Clustering.** *e.g.*, group all the cat pictures by ones that are most similar.
 * **Reinforcement learning.** *e.g.*, learn to predict whether a picture is a cat on the fly! If you get the answer right, I'll give you a cookie. If you get it wrong, I'll punch you in the face. Go!
-* *etc*.
+
+And so on.
 
 
+<a id="what-is-model"></a>
 What is this "model" thing that machine learning people are always talking about?
 ----------------
 
@@ -37,6 +53,7 @@ A model is a *concise summary of data* that simply *retains some statistical pro
 This goes on and on. It also gets dramatically more complicated, of course, but the idea that we're providing a concise summary of the data is always true.
 
 
+<a id="what-is-inference"></a>
 What is statistical inference?
 ----------------
 
@@ -49,6 +66,7 @@ Statistics! It's magic!
 Of course this is a simple example. Generally you're doing something dramatically more complicated.
 
 
+<a id="what-is-statistics"></a>
 Wait, why is machine learning not just statistics?
 ------------------
 
@@ -59,6 +77,7 @@ There's a lot of overlap of course, but if you pick up a paper from a machine le
 Also, machine learning people often get things like "grants" and "money for grad students", while statisticians get things like "goodwill" and "maybe a grad student next year, if this DARPA thing works out."
 
 
+<a id="why-ml"></a>
 Why should I use machine learning?
 ---------------
 
@@ -71,6 +90,7 @@ Were the topics perfect? Absolutely not; some of them were junk. But would they 
 There are lots of other examples, too. If you're a programmer, and you want to implement an algorithm that detects if there's a cow in a picture, you could write an algorithm, or you could get it mostly right most of the time, and just use machine learning.
 
 
+<a id="when-ml"></a>
 When should I use machine learning?
 -------------
 
@@ -98,12 +118,14 @@ Another good question to ask is:
 Actually the answer is "yes" surprisingly often, like in the case of inferring topics in Sarah Palin's email (see above). But that was a surprising result even when it came out. And it is certainly not always true, so when starting out, you should pause and think, "ok, but what is the statistical nature of this?"
 
 
+<a id="why-not-ml"></a>
 When should I not use machine learning?
 ---------------
 
 Honestly, you should probably **avoid it if you can.** But a particularly bad time to use it is when you can describe the phenomenon precisely using some mathematical equation. So, for example, you wouldn't use machine learning to predict when a dropped ball is going to hit the ground, because you already know that from math.
 
 
+<a id="academic-ml"></a>
 How are the academic and industrial machine learning communities different?
 ---------------
 
@@ -114,6 +136,7 @@ In industry it's much, much simpler: the question is simply *does this thing run
 If you're an algorithms person, there is bad news here: basically everything is exponential. In neither case do people talk much about asymptotic running time.
 
 
+<a id="not-in-papers"></a>
 What do I need to look out for that's not really covered in papers?
 ---------------
 
@@ -127,6 +150,7 @@ Here are a few things.
 * Often models start off bad and get much better over time. So be aware that your model might start off bad and get much better over time.
 
 
+<a id="conclusions"></a>
 "Conclusions"
 ----------------
 
