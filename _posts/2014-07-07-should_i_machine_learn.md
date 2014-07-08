@@ -131,10 +131,10 @@ Here are a few things.
 
 * If you're ingesting historical data, you've got to train a model in probably ~1000x real time to run through all of it. That disqualifies a lot of fancy models.
 * Related, often you can't completely decouple infrastructure and algorithms teams for large engineering initiatives. For example, if you're aggregating counts and the changes need to be reflected immediately, it's harder to run distributed on something like Riak, because the writes might not be reflected immediately.
-* Most academic literature focuses on models, but evaluation is just as important. Particularly evaluation &mdash; you need to know how good your model is doing, and if you can't tell, you can't optimize it. Sadly even though it's such an important problem, almost no papers are written about it.
+* Most academic literature focuses on models, but evaluation is just as important. You need to know how good your model is doing, and if you can't tell, you can't optimize it. Sadly even though it's such an important problem, almost no papers are written about it.
 * Speaking of which, core evaluation is not an abstract measurement like ROC curves, or precision, or anything like that; it's some business metric, like returning usership (or whatever is relevant to your product). Likewise, if your service fails, that's basically equivalent to a core resource failing, and you should probably give the users an error page.
 * Cleaning your data takes a nontrivial amount of time.
-* Often models start off bad and get much better over time. So be aware that your model might start off bad and get much better over time.
+* Often models start off bad and get much better over time. So be aware that your comparing your fancy new model and a model that's in production might be really unfair to the new model.
 
 
 <a id="conclusions"></a>
