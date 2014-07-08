@@ -30,7 +30,7 @@ What is this "model" thing that machine learning people are always talking about
 
 A model is a *concise summary of data* that simply *retains some statistical property of the data that you care about*. These summaries that "model" your data can be used for any number of things:
 
-* **To simply tell you about the behavior of your data.** For example, the *mean* is a model. If you imaging picking numbers at random from 1-10, a *mean does summarize some useful information about your data. The same with the median and the variance. These are extremely lossy models, but they are models of your data.
+* **To simply tell you about the behavior of your data.** For example, the *mean* is a model. If you imaging picking numbers at random from 1-10, a mean does summarize some useful information about your data. The same with the median and the variance. These are extremely lossy models, but they are models of your data.
 * **To classify data.** Say you've trained a classifier that classifies whether a photo contains a cat or not. That classifier concisely summarizes your data as "cat photo" or "non-cat photo."
 * **As a more space-efficient way to represent data for some other task.** For example, you might generate paraphrases of some document, and then use that paraphrase to classify a document. Or you might present it to a user. *etc*.
 
