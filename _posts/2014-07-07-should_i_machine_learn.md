@@ -27,19 +27,6 @@ Machine learning is a loose confederation of problems whose only commonality is 
 And so on.
 
 
-<a id="what-is-model"></a>
-What is this "model" thing that machine learning people are always talking about?
-----------------
-
-A model is a *concise summary of data* that simply *retains some statistical property of the data that you care about*. These summaries that "model" your data can be used for any number of things:
-
-* **To simply tell you about the behavior of your data.** For example, the *mean* is a model. If you imaging picking numbers at random from 1-10, a mean does summarize some useful information about your data. The same with the median and the variance. These are extremely lossy models, but they are models of your data.
-* **To classify data.** Say you've trained a classifier that classifies whether a photo contains a cat or not. That classifier concisely summarizes your data as "cat photo" or "non-cat photo."
-* **As a more space-efficient way to represent data for some other task.** For example, you might generate paraphrases of some document, and then use that paraphrase to classify a document. Or you might present it to a user. *etc*.
-
-This goes on and on. It also gets dramatically more complicated, of course, but the idea that we're providing a concise summary of the data is always true.
-
-
 <a id="what-is-inference"></a>
 What is statistical inference?
 ----------------
@@ -51,6 +38,19 @@ For example, say I have a bin with some number of black balls and white balls in
 Statistics! It's magic!
 
 Of course this is a simple example. Generally you're doing something dramatically more complicated.
+
+
+<a id="what-is-model"></a>
+What is this "model" thing that machine learning people are always talking about?
+----------------
+
+A model is a *concise summary of data* that simply *retains some statistical property of the data that you care about*. These summaries that "model" your data can be used for any number of things:
+
+* **To simply tell you about the behavior of your data.** For example, the *mean* is a model. If you imaging picking numbers at random from 1-10, a mean does summarize some useful information about your data. The same with the median and the variance. These are extremely lossy models, but they are models of your data.
+* **To classify data.** Say you've trained a classifier that classifies whether a photo contains a cat or not. That classifier concisely summarizes your data as "cat photo" or "non-cat photo."
+* **As a more space-efficient way to represent data for some other task.** For example, you might generate paraphrases of some document, and then use that paraphrase to classify a document. Or you might present it to a user. *etc*.
+
+This goes on and on. It also gets dramatically more complicated, of course, but the idea that we're providing a concise summary of the data is always true.
 
 
 <a id="what-is-statistics"></a>
