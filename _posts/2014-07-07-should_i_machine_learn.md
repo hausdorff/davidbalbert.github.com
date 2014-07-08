@@ -83,17 +83,25 @@ The first heuristic is two parts. If one of the following is not true, then you 
 
 So take an example like search engines. If I ask a law librarian to find all relevant cases for something, they will usually produce good work. Likewise, if a search engine produces results for me, I can quickly determine if they're good or not.
 
-And as we all probably know, machine learning has indeed helped search along.
+So, at the very least it satisfies both these criteria. And indeed, as we all probably know, machine learning has helped search engines along.
 
 In contrast, take music recommendations. If I give you a series of suggested songs, can you detect a pattern? If you give a list of your favorite songs to even a really good friend, can they generate a list of recommendations? I mean, maaaaaaaayyybe they can, but a lot of times, they can't. Like, I listen to Bach and also stuff like Dillinger Escape Plan. So good luck predicting what else I'll like.
 
-Looking at content recommendation sites, it is obvious that machine learning might save you a bit of time, and it might generate interesting suggestions, but really it's not so much that the recommendations are good as it is that the recommendations are better than nothing.
+And this bears out with the rule above. Looking at content recommendation sites, it is obvious that machine learning might save you a bit of time, and it might generate interesting suggestions, but really it's not so much that the recommendations are good as it is that the recommendations are better than nothing.
 
-Of course, it should If your task passes the above it **does not mean it can be solved with machine learning.** It takes a *lot* of work to make a good search engine, for example. So another good question to ask is:
+Of course, it should be noted that if your task passes the above criteria it **does not mean it can or should be solved with machine learning.** For example, it takes a *lot* of work to make a good search engine. Those questions only help you throw out a large number of possible problems you might approach using machine learning.
+
+Another good question to ask is:
 
 * Can this problem be solved by looking at statistical outcomes?
 
-Actually the answer is "yes" surprisingly often, like in the case of inferring topics in Sarah Palin's email (see above). But that was a surprising result even when it came out. And it is certainly not always true, so when starting out, you should pause and think, "ok, but what is the statistical nature of this."
+Actually the answer is "yes" surprisingly often, like in the case of inferring topics in Sarah Palin's email (see above). But that was a surprising result even when it came out. And it is certainly not always true, so when starting out, you should pause and think, "ok, but what is the statistical nature of this?"
+
+
+When should I not use machine learning?
+---------------
+
+Honestly, you should probably **avoid it if you can.** But a particularly bad time to use it is when you can describe the phenomenon precisely using some mathematical equation. So, for example, you wouldn't use machine learning to predict when a dropped ball is going to hit the ground, because you already know that from math.
 
 
 How are the academic and industrial machine learning communities different?
@@ -104,6 +112,19 @@ Most of the recent academic activity has been oriented towards finding models th
 In industry it's much, much simpler: the question is simply *does this thing run in a reasonable amount of time, and give us ok-ish results*?
 
 If you're an algorithms person, there is bad news here: basically everything is exponential. In neither case do people talk much about asymptotic running time.
+
+
+What do I need to look out for that's not really covered in papers?
+---------------
+
+Here are a few things.
+
+* If you're ingesting historical data, you've got to train a model in probably ~1000x real time to run through all of it. That disqualifies a lot of fancy models.
+* Related, often you can't completely decouple infrastructure and algorithms teams for large engineering initiatives. For example, if you're aggregating counts and the changes need to be reflected immediately, it's harder to run distributed on something like Riak, because the writes might not be reflected immediately.
+* Most academic literature focuses on models, but evaluation is just as important. Particularly evaluation &mdash; you need to know how good your model is doing, and if you can't tell, you can't optimize it. Sadly even though it's such an important problem, almost no papers are written about it.
+* Speaking of which, core evaluation is not an abstract measurement like ROC curves, or precision, or anything like that; it's some business metric, like returning usership (or whatever is relevant to your product). Likewise, if your service fails, that's basically equivalent to a core resource failing, and you should probably give the users an error page.
+* Cleaning your data takes a nontrivial amount of time.
+* Often models start off bad and get much better over time. So be aware that your model might start off bad and get much better over time.
 
 
 "Conclusions"
