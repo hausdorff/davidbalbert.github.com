@@ -52,15 +52,21 @@ Here are some nice things about RWO.
     core abstractions (*e.g.*, "here's a `for` loop"), and the core
     library (*e.g.*, "call this to get a `List<T>`), and give you no
     other context.
-* **A whole section on the runtime.** This is a **HUGE DEAL** because,
-  if you don't have good access to knowledge about how the runtime of
-  your production language works, you are taking a huge risk. Yet,
-  almost no language books actually cover much about the runtime at
-  all! This section provides a lot of the knowledge you would need
-  to make this risk manageable. It is so good, I completely reversed
-  my attitude about OCaml. Before, I would never have considered
-  pushing OCaml to production before, whereas now, I feel I understand
-  enough that the risk is plausibly small.
+* **A whole section on the runtime.** A whole section!
+  * This is a **HUGE DEAL** because, if you don't have good access
+    to knowledge about how the runtime of your production language
+    works, you are taking a huge risk. Yet, almost no language books
+    actually cover much about the runtime at all!
+  * This section provides a lot of the knowledge you would need
+    to make this risk manageable. It is so good, I completely reversed
+    my attitude about OCaml. Before, I would never have considered
+    pushing OCaml to production before, whereas now, I feel I understand
+    enough that the risk is plausibly small.
+  * Consider this vs another book that's dear to my heart, Learn You A
+    Haskell. It's entertaining, and got me through important things
+    (like monads), but it provides almost no coverage of *how the
+    langauge runs*. This is a critical failure! It basically relegates
+    Haskell to a fun toy I use in my spare time.
 * **A whole section on tooling to solve important tasks.** Includes
   things like parsing and lexing, serialization, concurrent libraries,
   etc.
