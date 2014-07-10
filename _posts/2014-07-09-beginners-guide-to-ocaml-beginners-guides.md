@@ -29,7 +29,7 @@ best computer language book I've ever read in my life.
 In addition, I would advise **against** reading other books, as they
 tend to be incorrect and/or in French.
 
-(EDIT: a commenter points out that [OCaml from the Very Beinning](http://ocaml-book.com/) doesn't suck, and is more beginner-oriented. I've never read it, but [Ron Minksy says nice things about it](http://www.amazon.com/review/R2C3RGQUES25UP/ref=cm_cr_pr_perm?ie=UTF8&ASIN=0957671105). So there's a data point.)
+(EDIT: a commenter points out that [OCaml from the Very Beginning](http://ocaml-book.com/) doesn't suck, and is more beginner-oriented. I've never read it, but [Ron Minksy says nice things about it](http://www.amazon.com/review/R2C3RGQUES25UP/ref=cm_cr_pr_perm?ie=UTF8&ASIN=0957671105). So there's a data point.)
 
 Here are some nice things about RWO.
 
