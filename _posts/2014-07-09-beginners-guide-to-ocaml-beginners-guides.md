@@ -24,9 +24,10 @@ What books are available?
 
 Read **[Real World OCaml](https://realworldocaml.org/)**
 (colloquially: RWO), and **accept no substitutes**. It might be the
-best computer language book I've ever read in my life. In addition, I
-would advise **against** reading other books, as they tend to be
-incorrect and/or in French.
+best computer language book I've ever read in my life.
+
+In addition, I would advise **against** reading other books, as they
+tend to be incorrect and/or in French.
 
 Here are some nice things about RWO.
 
@@ -41,15 +42,16 @@ Here are some nice things about RWO.
     enough knowledge of how the feature works under the covers that
     you could be safe justifying its use for a production system.
   * A good example is their coverage of pattern matching. It turns out
-    that matching desugars down to a finite state machine, so if two
+    that matching desugars down to a finite state machine. So, if two
     patterns overlap, checking them will look like going through a
-    bunch of very cleverly nested if statements, rather than starting
-    over for each pattern. Their providing this knowledge is valuable
-    to someone like me, who needs this sort of intuition when writing
-    production code.
+    bunch of very cleverly nested if statements, rather than checking
+    one pattern, and always starting completely over again for the
+    next pattern. Providing this knowledge is valuable to someone like
+    me, who needs this sort of intuition when writing production code.
   * This is in contrast to a lot of books sort of walk you through the
     core abstractions (*e.g.*, "here's a `for` loop"), and the core
-    library (*e.g.*, "call this to get a `List<T>`).
+    library (*e.g.*, "call this to get a `List<T>`), and give you no
+    other context.
 * **A whole section on the runtime.** If you don't have good access
   to knowledge about how the runtime of your production language
   works, you are taking a huge risk. This section provides a lot of
@@ -111,19 +113,19 @@ compile are highlighted in yellow:**
 
 <center><img src="images/ocaml-beginner/wrong.png" width=600/></center>
 
-At a keypress (on emacs its C-c <TAB>), Merlin will **produce a list
+As you type, Merlin will **produce a list
 of autocomplete suggestions:**
 
 <center><img src="images/ocaml-beginner/autocomplete-1.png" width=600/></center>
 
-If you wait lonver, Merlin will bring up a **list of suggested
-autocompletes:**
+Merlin also has a hotkey (on emacs it's C-c <TAB>) that will bring up
+a **list of suggested autocompletes:**
 
 <center><img src="images/ocaml-beginner/autocomplete-2.png" width=600/></center>
 
-At a keypress (on emacs it's C-c C-t), it will take the expression
-that the cursor is currently at **and tell you what type it is!!!**
-(It's included at the bottom of the screen.) This is **incredibly**
+Another hotkey (on emacs it's C-c C-t) takes  the expression that the
+cursor is currently at **and tells you what type it is!!!** (It's
+included at the bottom of the screen.) This is **incredibly**
 convenient because the compiler then doesn't have an opportunity to
 complain about types.
 
@@ -136,11 +138,14 @@ simply **brings up the type definition!!**
 
 There are a **lot of things you can do here**. This is just a
 taste. It's an optional thing, but really, it's **well worth the time
-savings**.
+savings.**
 
 
 What are some good examples of source I can read?
 -------------------
+
+Good question! It's important to see really skilled programmers use
+OCaml in a really idiomatic way!
 
 The best open OCaml system is probably the
 [Jane Street Core](https://github.com/janestreet/core) and the
@@ -164,10 +169,15 @@ terrible. Now they are awesome.
 The 99
 [OCaml problems exercise](http://ocaml.org/learn/tutorials/99problems.html)
 is ok. It might not be the best way to learn, depending on your
-background.
+background, but I found it to be a useful way to learn common
+manipulations for standard OCaml data structures. In particular, I
+found that writing something, and then looking at the solution, showed
+me where I was not using idiomatic OCaml. That was helpful.
 
-In general, [the official OCaml "learn" page](http://ocaml.org/learn/)
-is a pretty good resource to start.
+There are both contained on the
+[the official OCaml "learn" page](http://ocaml.org/learn/)
+. It's a pretty good resource to start, and it will be consistently
+updated in the future.
 
 
 Where is good documentation?
@@ -180,7 +190,7 @@ is a good place to start.
 
 To get started with that, it may be necessary to look through the
 relevant online
-[RWO HTML chapters](https://realworldocaml.org/v1/en/html/index.html). (Certainly
+[RWO chapters](https://realworldocaml.org/v1/en/html/index.html). (Certainly
 this was true for me.)
 
 
