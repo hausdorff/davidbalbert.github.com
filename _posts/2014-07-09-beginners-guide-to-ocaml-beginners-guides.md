@@ -54,7 +54,8 @@ Here are some nice things about RWO.
     other context.
 * **A whole section on the runtime.** A whole section!
   * By "runtime" I mean "anything that is running when your program is
-    executing." That includes things like GC, *etc*.
+    executing." That includes things like GC, concurrency management,
+    *etc*.
   * This is a **HUGE DEAL** because, if you don't have good access
     to knowledge about how the runtime of your production language
     works, you are taking a huge risk. Yet, almost no language books
