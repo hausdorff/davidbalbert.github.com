@@ -90,7 +90,7 @@ What tools should I use?
 
 OCaml has a *very* strong type system. A combination of this fact,
 plus the fact that the types are usually *inferred* (*i.e.*, they are
-usually not written down explicitly), makes OCaml language where your
+usually not written down explicitly), makes OCaml a language where your
 intuition about what *should* be correct will be regularly shot down,
 and then shoved in your face until you get it right.
 
