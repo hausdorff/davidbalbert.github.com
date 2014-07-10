@@ -29,6 +29,8 @@ best computer language book I've ever read in my life.
 In addition, I would advise **against** reading other books, as they
 tend to be incorrect and/or in French.
 
+(EDIT: a commenter points out that [OCaml from the Very Beinning](http://ocaml-book.com/) doesn't suck, and is more beginner-oriented. I've never read it, but [Ron Minksy says nice things about it](http://www.amazon.com/review/R2C3RGQUES25UP/ref=cm_cr_pr_perm?ie=UTF8&ASIN=0957671105). So there's a data point.)
+
 Here are some nice things about RWO.
 
 * **Cogent and well-written.**
@@ -98,8 +100,8 @@ Please.
 
 Please, please make this easy on yourself.
 
-Invest in tooling that will shorten the gap between your writing
-something, and your compiler telling you it's totally wrong.
+Invest in tooling that will shorten the gap between writing
+something and the compiler telling you it's totally wrong.
 
 Follow the
 [RWO installation instructions](https://github.com/realworldocaml/book/wiki/Installation-Instructions)
@@ -130,7 +132,7 @@ of autocomplete suggestions:**
 
 <center><img src="images/ocaml-beginner/autocomplete-1.png" width=600/></center>
 
-Merlin also has a hotkey (on emacs it's C-c <TAB>) that will bring up
+Merlin also has a hotkey (on emacs it's C-c &lt;TAB&gt;) that will bring up
 a **list of suggested autocompletes:**
 
 <center><img src="images/ocaml-beginner/autocomplete-2.png" width=600/></center>
