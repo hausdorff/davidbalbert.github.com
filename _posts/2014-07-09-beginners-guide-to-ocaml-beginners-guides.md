@@ -175,7 +175,7 @@ What are some good tutorials?
 -----------------------------
 
 The [standard OCaml tutorials](http://ocaml.org/learn/tutorials/) are
-now awesome. They used to be non-existant, then they were
+now awesome. They used to be non-existent, then they were
 terrible. Now they are awesome.
 
 The 99
