@@ -213,6 +213,13 @@ following.
   down, you'll be more comfortable in your language, because
   translating your thoughts to code gives you something solid to fall
   back on.
+* Read a lot of source if that helps. I found the Jane Street core
+  very useful for understanding the idioms of OCaml.
+* 99 problems, *etc*., let you implement something, and then see
+  idiomatic ways to do it. This can be very very useful.
+* Get code reviews. I have friends who help me with this. It's
+  incredibly helpful for understanding where you do something not
+  OCaml-kosher.
 
 
 Conclusions
