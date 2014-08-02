@@ -9,7 +9,9 @@ title: Alex Clemmer
   <p>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> <span class="theory">{{ post.theory }}</span> <span class="technique">{{ post.technique }}</span> <span class="analysis">{{ post.analysis }}</span> <span class="journal">{{ post.journal }}</span> <a class="postTitle" href="{{ post.url }}">{{ post.title }}</a></li>
+        {% if post.nopost != true %}
+                <li><span>{{ post.date | date_to_string }}</span> <span class="theory">{{ post.theory }}</span> <span class="technique">{{ post.technique }}</span> <span class="analysis">{{ post.analysis }}</span> <span class="journal">{{ post.journal }}</span> <a class="postTitle" href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
     {% endfor %}
   </ul>
 </div>
