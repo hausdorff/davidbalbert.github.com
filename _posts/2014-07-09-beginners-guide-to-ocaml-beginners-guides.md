@@ -7,6 +7,8 @@ analysis: ■
 ---
 
 
+*[Translation available in [Japanese](http://postd.cc/beginners-guide-to-ocaml-beginners-guides/)]*
+
 So you want to learn OCaml. Where do you start? What do you do?
 
 I've been an OCaml beginner probably a dozen times &mdash; picking it
