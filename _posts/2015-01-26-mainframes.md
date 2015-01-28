@@ -9,7 +9,7 @@ analysis: ■
 
 IBM was at the top of the news aggregators a couple days ago as [irresponsible rumors](http://www.donotlink.com/www.forbes.com/sites/robertcringely/2015/01/22/next-weeks-bloodbath-at-ibm-wont-fix-the-real-problem/) spread that it was laying off more than 100,000 people. IBM eventually posted a [scathing denial](https://ibmhkblog.wordpress.com/), though not quickly enough to stem the flow of Internet pundits who showed up in droves (at, *e.g.*, [Hacker News](https://news.ycombinator.com/item?id=8944637)) to explain just how irrelevant IBM really is.
 
-This is a bad habit of the industry: the proclivity of technologists to write off entire industries simply because they have written off the technology that supports them is astoudingly arrogant and maddening.
+This is a bad habit of the industry: the proclivity of technologists to write off entire markets simply because they have written off the technology that supports them is astoudingly arrogant and maddening.
 
 The IBM discussion, thankfully, revolves partially around a particularly egregious example of this problem: IBM's flagship mainframe business.
 
