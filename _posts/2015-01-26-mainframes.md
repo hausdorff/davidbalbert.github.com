@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "More than half of IBM's profits come from mainframes"
+title: "Half of IBM's profits come from mainframes"
 permalink: mainframes.html
 comments: true
 analysis: ■
