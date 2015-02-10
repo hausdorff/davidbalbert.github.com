@@ -17,9 +17,13 @@ Oddly, while the last 10 years have seen remarkable improvements in the I/O perf
 
 This is the central question behind [the recent OSDI paper](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-peter_simon.pdf) by Simon Peter *et al*.
 
-Perhaps the most interesting things I learned from the paper is that the answer is actually no: **today, the main impediment to I/O performance seems to be the OS kernel itself.**
+Perhaps the most interesting things I learned from the paper is that the answer is actually no: **today, the main impediment to I/O latency seems to be the OS kernel itself.**
 
-In one striking experiment, they take commodity linux and attempt to break down the latency of a simple read and a simple write in Redis on commodity hardware. In particular:
+In one striking experiment, they take commodity linux and attempt to break down the latency of a simple read and a simple write in Redis on commodity hardware.
+
+*(NB, the "latency" part of this is important — as I'll mention in a minute. It is possible to improve throughput by using multiple threads, but the point is that there is still room for improvement in the latency of a particular request, especially at the level of a datacenter, where this sort of thing is potentially worth a lot of money.)*
+
+In particular:
 
 * They receive a 1 KB of packet from the wire.
 * They either read or write some data in Redis (depending on the test).
