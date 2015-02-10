@@ -13,6 +13,7 @@ Server I/O performance still matters here. It is impossible to do well on either
 
 Oddly, while the last 10 years have seen remarkable improvements in the I/O performance of commodity hardware, we have not seen a dramatic uptick in system I/O performance. And so it is worth wondering: *are standard commodity OSs even equipped to deliver these I/O improvements?*
 
+
 ## Simple I/O on commodity Linux hardware
 
 This is the central question behind [the recent OSDI paper](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-peter_simon.pdf) by Simon Peter *et al*.
@@ -53,17 +54,19 @@ This sort of purposeful approach is important: it's hard to optimize what you do
 
 ## Toward I/O-less OSs and beyond
 
-The paper uses this experiment as motivation for an experimental OS called [Arrakis](https://arrakis.cs.washington.edu/).
+Understanding roughly how much time a request will spend in the kernel is generally useful for designing and maintaining scale web services.
+
+Up to this point, our main weapons against latency have been things like pipelining and multithreading. It is interesting to think what might happen, though, if the latency less of an issue. For example, it makes me (a networking noob) wonder whether things like the pipelining stack in SPDY might be simpler.
+
+In any event, the rest of the paper explores how we might go about reducing such latency, using this experiment as motivation for a research OS called [Arrakis](https://arrakis.cs.washington.edu/).
 
 The core idea of Arrakis, as far as I can tell, is that many of the things the kernel provides for I/O can actually be provided by commodity hardware — for example, protection, multiplexing, and scheduling.
 
-So, it looks like the goal of Arrakis is to pull the I/O out of the "control plane" (*i.e.* to pull as much of it out of the kernel as possible), and to put it into the userspace "data plane" (*i.e.*, such that things like multiplexing happen directly on the hardware, but never in the kernel).
+In other words, it looks like the goal of Arrakis is to pull the I/O out of the "control plane" (*i.e.* to pull as much of it out of the kernel as possible), and to put it into the userspace "data plane" (*i.e.*, such that things like multiplexing happen directly on the hardware, but never in the kernel).
 
 The results look good, too — the authors claim 81% reduction in write latency, and 65% reduction in read latency.
 
-This is a great lesson to learn — just how much time you spend in the kernel is important to know just as a general guideline when desining and running scale web services.
-
-On balance, a good start though it is, it's not clear this is precisely the right solution. Having an OS that requires manual configuration to the specific hardware of the datacenter seems like it might be bad — the vast majority of service-level outages are still caused by configuration errors, and the worst thing you can do is to make them more opaque.
+Still, exciting though it is, there seems to be room for improvement. For example, having an OS that requires manual configuration for specific hardware, especially at the level of the datacenter, seems like it might be bad. The vast majority of service-level outages are still caused by configuration errors, and making them more opaque is not a favor.
 
 I suppose time will tell whether this fear is founded in reality or not — I'm still more or less a complete OS noob, in any event.
 
