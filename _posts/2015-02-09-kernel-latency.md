@@ -19,7 +19,7 @@ This is the central question behind [the recent OSDI paper](https://www.usenix.o
 
 Perhaps the most interesting things I learned from the paper is that the answer is actually no: **today, the main impediment to I/O performance seems to be the OS kernel itself.**
 
-In one striking experiment, they take commodity linux and attempt to determine the latency of a simple read and a simple write in Redis on commodity hardware . In particular:
+In one striking experiment, they take commodity linux and attempt to break down the latency of a simple read and a simple write in Redis on commodity hardware. In particular:
 
 * They receive a 1 KB of packet from the wire.
 * They either read or write some data in Redis.
