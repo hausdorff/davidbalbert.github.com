@@ -17,7 +17,7 @@ Oddly, while the last 10 years have seen remarkable improvements in the I/O perf
 
 This is the central question behind [the recent OSDI paper](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-peter_simon.pdf) by Simon Peter *et al*.
 
-Perhaps the most interesting thing in the paper is that the answer is actually no: **today, the main impediment to I/O performance seems to be the OS kernel itself.**
+Perhaps the most interesting things I learned from the paper is that the answer is actually no: **today, the main impediment to I/O performance seems to be the OS kernel itself.**
 
 In one striking experiment, they take commodity linux and attempt to determine the latency of a simple read and a simple write in Redis on commodity hardware . In particular:
 
