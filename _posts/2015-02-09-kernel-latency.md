@@ -22,8 +22,8 @@ Perhaps the most interesting things I learned from the paper is that the answer 
 In one striking experiment, they take commodity linux and attempt to break down the latency of a simple read and a simple write in Redis on commodity hardware. In particular:
 
 * They receive a 1 KB of packet from the wire.
-* They either read or write some data in Redis.
-* They repeat this 1,000 times and average the time consumption.
+* They either read or write some data in Redis (depending on the test).
+* They repeat this 1,000 times and average the time consumption (done once for both the read and write experiements).
 * They run all of this on commodity Linux, and a commodity server.
   * *i.e.*, about $1200 worth of gear: Dell PowerEdge R520 has Intel x520 10G NIC and Intel RS3 RAID 1GB flash-backed cache, Sandy bridge CPU, 6 cores, 2.2 GHz.
 * They process all data **in a single thread**.

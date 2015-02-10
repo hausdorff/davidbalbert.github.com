@@ -1,0 +1,72 @@
+---
+layout: post
+title: "What are monads good for?"
+permalink: what-are-monads-good-for.html
+comments: true
+analysis: ■
+---
+
+
+You're a programmer.
+
+You Google something innocuous, like [what is a monad good for](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=what%20are%20monads%20good%20for)
+([or](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=what+are+monads+used+for)
+[other](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=monad+uses)
+[variants](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=monad+use+cases)
+[of](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=monads+in+practice)
+[the](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=monads+in+real+life)
+[question](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=what+is+the+point+of+monads)).
+
+**Q:** Do you get something sensible?
+
+**A:** No. You get page after page of nonsense trying to tell you what
+  a monad *is*.
+
+And so you think, **What? What is this? Why will no one *just say what
+they're good for?* What are you hiding from me? Is this some kind of
+weird cult?**
+
+Here are some things monads are good for.
+
+
+Handling errors
+---------------
+
+If something goes wrong in C, you generally emit an error code. This
+leads to 
+
+
+
+
+List/dict comprehension
+-----------------------
+
+In Python, if you want to generate all coordinates
+
+
+Making arguments to some functions implicit
+-------------------------------------------
+
+
+Exceptions
+----------
+
+
+Managing concurrency
+--------------------
+
+
+Continuations
+-------------
+
+
+Parsing
+-------
+
+
+DSLs
+----
+
+
+Probability distributions
+-------------------------
