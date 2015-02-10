@@ -7,9 +7,9 @@ analysis: ■
 ---
 
 
-Performance of live site systems — everything from K/V stores to lock servers — are still principally measured in *latency* and *throughput*.
+The performance of live site systems — everything from K/V stores to lock servers — is still measured principally in *latency* and *throughput*.
 
-It is impossible to do well on either metric without a performant I/O subsystem, so server I/O performance still matters.
+Server I/O performance still matters here. It is impossible to do well on either of these metrics without a performant I/O subsystem.
 
 Oddly, while the last 10 years have seen remarkable improvements in the I/O performance of commodity hardware, we have not seen a dramatic uptick in system I/O performance. And so it is worth wondering: *are standard commodity OSs even equipped to deliver these I/O improvements?*
 
@@ -17,18 +17,18 @@ Oddly, while the last 10 years have seen remarkable improvements in the I/O perf
 
 This is the central question behind [the recent OSDI paper](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-peter_simon.pdf) by Simon Peter *et al*.
 
-And, perhaps the most interesting thing I've learned is that the answer is actually no: **today, the main impediment to I/O performance seems to be the OS kernel itself.**
+Perhaps the most interesting thing in the paper is that the answer is actually no: **today, the main impediment to I/O performance seems to be the OS kernel itself.**
 
-In one striking experiment, they take simple commodity hardware and attempt to determine the latency of a simple read and a simple write in Redis, on commodity hardware. In particular:
+In one striking experiment, they take commodity linux and attempt to determine the latency of a simple read and a simple write in Redis on commodity hardware . In particular:
 
 * They receive a 1 KB of packet from the wire.
 * They either read or write some data in Redis.
 * They repeat this 1,000 times and average the time consumption.
-* They run all of this on commodity Linux, and a commodity server
+* They run all of this on commodity Linux, and a commodity server.
   * *i.e.*, about $1200 worth of gear: Dell PowerEdge R520 has Intel x520 10G NIC and Intel RS3 RAID 1GB flash-backed cache, Sandy bridge CPU, 6 cores, 2.2 GHz.
-* They Process all data in a single thread.
+* They process all data **in a single thread**.
 
-The results striking:
+The results are striking:
 
 **Read (in-memory):**
 
@@ -38,7 +38,7 @@ The results striking:
 
 <center><img src="../images/redis_write.png" alt="Redis write" width="600"></center>
 
-Worth pointing out is that in each case about 70% of the time in the kernel is spent in the networking stack. Even with larger payloads, these numbers should also remain a fairly constant overhead, since the networking stack has to be re-invoked for each packet.
+Worth pointing out is that in each case about 70% of the time in the kernel is spent in the networking stack. Even with larger payloads, these numbers should also remain a fairly constant overhead, since the networking stack has to be re-invoked for each packet. That said, if the application is more expensive than just writing the packet to memory, then the application time might balloon.
 
 One of the interesting lessons to me (though I am a networking/OSs noob) is the deliberate choice to use single-threaded latency, rather than throughput, as the core measurement.
 
